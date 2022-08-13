@@ -1,0 +1,44 @@
+{
+  "name": "realty",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "./node_modules/.bin/husky install",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*.js\""
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.10.1",
+    "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.10.0",
+    "axios": "^0.27.2",
+    "color": "^4.2.3",
+    "formik": "^2.2.9",
+    "lodash": "^4.17.21",
+    "mailtrap": "^3.0.0",
+    "next": "12.2.5",
+    "next-ym": "^2.3.5",
+    "nookies": "^2.5.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-imask": "^6.4.2",
+    "react-scroll": "^1.8.7",
+    "remove": "^0.1.5",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/prompt-cli": "^17.0.3",
+    "eslint": "^8.21.0",
+    "eslint-config-next": "12.2.5",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
+  }
+}
