@@ -6,7 +6,7 @@ export const Label = SC.div`
   white-space: pre-line;
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 56px;
   line-height: 1.1;
   color: ${({color}) => color || theme.colors.Black};
   margin-bottom: 15px;

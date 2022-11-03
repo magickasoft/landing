@@ -17,7 +17,7 @@ const Label = SC.div`
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
-  color: ${theme.colors.White};
+  color: ${theme.colors.Black};
 `;
 
 const Text = SC.div`
@@ -25,7 +25,7 @@ const Text = SC.div`
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
-  color: ${theme.colors.White};
+  color: ${theme.colors.Black};
   margin-top: 16px;
 `;
 
