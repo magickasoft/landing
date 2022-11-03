@@ -11,9 +11,6 @@ export const Label = SC.div`
   color: ${({color}) => color || theme.colors.Black};
   margin-bottom: 15px;
   @media ${maxDevice.laptop} {
-    font-size: 32px;
-  }
-  @media ${maxDevice.laptop} {
     font-size: 28px;
   }
 `;

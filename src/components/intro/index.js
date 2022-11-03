@@ -51,8 +51,7 @@ export const Intro = props => (
       <Layout>
         <div>
           <Content>
-            <Label color={theme.colors.White}>landing page</Label>
-            <Label color={theme.colors.White}>description</Label>
+            <Label color={theme.colors.White}>Создаём IT команды для технологических проектов</Label>
           </Content>
           <List container spacing={3}>
             {list.map((o, i) => (
