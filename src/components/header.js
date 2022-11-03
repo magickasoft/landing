@@ -13,35 +13,41 @@ const Container = SC.header`
   background: ${({active}) => (active ? '#000000' : '#00000038')};
 `;
 
-const Line1 = SC.div`
+const Content = SC.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 4.75rem;
   margin: 0 140px 0 140px;
   @media ${maxDevice.tablet} {
     margin: 0 30px 0 30px;
+    height: 3.5rem;
   }
   @media ${maxDevice.mobileL} {
     margin: 0 30px 0 30px;
+    height: 3.5rem;
   }
 `;
 
 const SCIcon = SC(Icon)`
-  margin-right: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 15px;
 `;
 
 const Label = SC.div`
   display: flex;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  color: #FFFFFF;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   @media ${maxDevice.tablet} {
     display: none
   }
+`;
+
+const Link = SC.a`
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  color: #FFFFFF;
 `;
 
 const Row = SC.div`
@@ -49,34 +55,40 @@ const Row = SC.div`
   flex-direction: row;
 `;
 
-export const Header = props => {
+const useHeaderScroll = () => {
   const [active, setActive] = React.useState(false);
 
   React.useEffect(() => {
-    window?.addEventListener('scroll', handleScroll);
+    window?.addEventListener('scroll', () => {
+      setActive(window?.scrollY >= 400);
+    });
   }, []);
 
-  const handleScroll = () => {
-    if (window?.scrollY >= 400) {
-      setActive(true);
-    } else {
-      setActive(false);
-    }
-  };
+  return [active];
+};
+
+export const Header = props => {
+  const [active] = useHeaderScroll();
 
   return (
     <Container active={active}>
-      <Line1>
+      <Content>
         <Text color={theme.colors.White}>
-          <strong>landing</strong> page
+          <strong>KOTELOV</strong>
         </Text>
         <Row>
           <Label>
-            <SCIcon name="call" size={20} />
-            <a href="tel://+79537647035">Admin</a>
+            <Link href="tel://+79537647035">+7 953 764 70 35</Link>
+            <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
           </Label>
+          <Link href="https://t.me/evgeny_shmakov">
+            <SCIcon name="telegram" size={32} />
+          </Link>
+          <Link href="https://wa.me/79537647035">
+            <SCIcon name="whatsApp" size={32} />
+          </Link>
         </Row>
-      </Line1>
+      </Content>
     </Container>
   );
 };
