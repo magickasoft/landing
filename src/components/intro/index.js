@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 import {Element} from 'react-scroll';
 import {Label, Section} from '../common';
 import {maxDevice, minDevice, theme} from '../../styles';
-import {Icon} from '../icon';
 import {Item} from './item';
 import {list} from './data';
 
@@ -45,30 +44,6 @@ const List = SC(Grid)`
     margin: 60px auto 0px auto; 
   }
 `;
-const SCIcon = SC(Icon)`
-  margin-right: 7px;
-`;
-
-const SCIconLeft = SC(Icon)`
-  background-color: #fff;
-  border-radius: 50%;
-  margin-left: 15px;
-`;
-
-const PhoneBlock = SC.div`
-  margin: 10px 0;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  color: #FFFFFF;
-  align-items: center;
-  display: flex;
-`;
-
-const Block = SC.div`
-  margin-top: 20px;
-`;
 
 export const Intro = props => (
   <Element name="intro">
@@ -78,18 +53,6 @@ export const Intro = props => (
           <Content>
             <Label color={theme.colors.White}>landing page</Label>
             <Label color={theme.colors.White}>description</Label>
-            <Block>
-              <PhoneBlock>
-                <SCIcon name="call" size={20} />
-                <a href="tel://+79537647035">Admin</a>
-                <a href="https://t.me/evgeny_shmakov">
-                  <SCIconLeft name="telegram" size={32} />
-                </a>
-                <a href="https://wa.me/79537647035">
-                  <SCIconLeft name="whatsApp" size={32} />
-                </a>
-              </PhoneBlock>
-            </Block>
           </Content>
           <List container spacing={3}>
             {list.map((o, i) => (
