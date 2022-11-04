@@ -5,26 +5,24 @@ import {Text} from './common';
 import {maxDevice, theme} from '../styles';
 
 const Container = SC.header`
+  background: ${({active}) => (active ? '#ffffff38' : '#ffffff')};
   z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: ${({active}) => (active ? '#000000' : '#00000038')};
-`;
-
-const Content = SC.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 4.75rem;
-  margin: 0 140px 0 140px;
+  margin: 0 auto;
+  padding: 0 140px 0 140px;
   @media ${maxDevice.tablet} {
-    margin: 0 30px 0 30px;
+    padding: 0 30px 0 30px;
     height: 3.5rem;
   }
   @media ${maxDevice.mobileL} {
-    margin: 0 30px 0 30px;
+    padding: 0 30px 0 30px;
     height: 3.5rem;
   }
 `;
@@ -47,7 +45,9 @@ const Label = SC.div`
 const Link = SC.a`
   font-size: 0.9rem;
   line-height: 1.125rem;
-  color: #FFFFFF;
+  background: linear-gradient(90deg,#fe00dd -56.25%,#fd0009 135.94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Row = SC.div`
@@ -72,23 +72,21 @@ export const Header = props => {
 
   return (
     <Container active={active}>
-      <Content>
-        <Text color={theme.colors.White}>
-          <strong>KOTELOV</strong>
-        </Text>
-        <Row>
-          <Label>
-            <Link href="tel://+79537647035">+7 953 764 70 35</Link>
-            <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
-          </Label>
-          <Link href="https://t.me/evgeny_shmakov">
-            <SCIcon name="telegram" size={32} />
-          </Link>
-          <Link href="https://wa.me/79537647035">
-            <SCIcon name="whatsApp" size={32} />
-          </Link>
-        </Row>
-      </Content>
+      <Text>
+        <strong>IT Angels</strong>
+      </Text>
+      <Row>
+        <Label>
+          <Link href="tel://+79537647035">+7 953 764 70 35</Link>
+          <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
+        </Label>
+        <Link href="https://t.me/evgeny_shmakov">
+          <SCIcon name="telegram" size={32} />
+        </Link>
+        <Link href="https://wa.me/79537647035">
+          <SCIcon name="whatsApp" size={32} />
+        </Link>
+      </Row>
     </Container>
   );
 };

@@ -21,7 +21,7 @@ export const Text = SC.div`
   font-weight: 200;
   font-size: 24px;
   line-height: 1.1;
-  color: ${({color}) => color || '#777777'};
+  color: ${({color}) => color || '#181818'};
   @media ${maxDevice.laptop} {
     font-size: 20px;
   }
