@@ -2,7 +2,7 @@ import React from 'react';
 import Script from 'next/script';
 import Head from 'next/head';
 import Router, {useRouter} from 'next/router';
-import {Header} from '../components';
+import {Header, Footer} from '../components';
 import {pageview, GA_MEASUREMENT_ID} from '../helpers/gtag';
 import {withYM, YA_METRIKA_ID} from '../helpers/ym';
 import {ThemeProvider} from '@mui/material/styles';
@@ -56,6 +56,7 @@ function App({Component, emotionCache = clientSideEmotionCache, pageProps}) {
         <CssBaseline />
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </CacheProvider>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import SC from '@emotion/styled';
 import {Icon} from './icon';
 import {Text} from './common';
-import {maxDevice, theme} from '../styles';
+import {maxDevice} from '../styles';
 
 const Container = SC.header`
   background: ${({active}) => (active ? '#ffffff38' : '#ffffff')};

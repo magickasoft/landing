@@ -4,6 +4,7 @@ export {ContactForm} from './contactForm';
 export {ListOfBuildings} from './listOfBuildings';
 export {Contact} from './contact';
 export {Label, Text, Section} from './common';
+export {Footer} from './footer';
 export {Header} from './header';
 export {InputPhone} from './inputPhone';
 export {Page} from './page';
