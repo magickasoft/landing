@@ -16,13 +16,13 @@ const Container = SC.header`
   justify-content: space-between;
   height: 4.75rem;
   margin: 0 auto;
-  padding: 0 140px 0 140px;
+  padding: 0 140px;
   @media ${maxDevice.tablet} {
-    padding: 0 30px 0 30px;
+    padding: 0 30px;
     height: 3.5rem;
   }
   @media ${maxDevice.mobileL} {
-    padding: 0 30px 0 30px;
+    padding: 0 30px;
     height: 3.5rem;
   }
 `;
@@ -36,7 +36,6 @@ const SCIcon = SC(Icon)`
 const Label = SC.div`
   display: flex;
   flex-direction: column;
-  align-items: left;
   @media ${maxDevice.tablet} {
     display: none
   }
