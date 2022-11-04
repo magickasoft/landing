@@ -15,7 +15,11 @@ export const GlobalStyle = props => (
     styles={css`
       html,
       body {
-        background-color: #f5f5f5;
+        transition: 0s;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        background-color: #fff;
+        color: #181818;
         padding: 0;
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
@@ -23,15 +27,42 @@ export const GlobalStyle = props => (
       }
 
       a {
-        color: inherit;
+        background: 0 0;
         text-decoration: none;
+        cursor: pointer;
+        &:not([href]) {
+          cursor: initial;
+        }
       }
+
       a:hover {
-        color: #009688;
+        background: linear-gradient(90deg, #fe00dd -56.25%, #fd0009 135.94%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      a:active,
+      a:hover {
+        outline: 0;
       }
 
       * {
         box-sizing: border-box;
+
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        &:not(iframe) {
+          transition: 0.25s ease;
+          transition-property: background, border, color, left, margin, padding, right, opacity;
+        }
+      }
+
+      ::selection {
+        background: #828290;
+        color: #fff;
       }
     `}
   />
