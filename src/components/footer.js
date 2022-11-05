@@ -121,6 +121,70 @@ const SocialLink = SC.a`
   }
 `;
 
+const Nav = SC.nav`
+  display: none;
+  padding: 0 0 1rem;
+  @media ${minDevice.laptop} {
+    display: block;
+  }
+`;
+
+const Ul = SC.ul`
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(380px);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`;
+
+const Li = SC.li`
+  padding: 0 0 0.25rem;
+  width: 10rem;
+  display: list-item;
+  text-align: -webkit-match-parent;
+`;
+
+const NavLink = SC.a`
+  color: #22262A;
+  font-size: 14px;
+  line-height: 20px;
+  background-image: linear-gradient(-90deg,#181818 0%,#181818 49.99%,#FD0009 50%,#FE00DD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 100%;
+  background-size: 200%;
+
+  &:hover {
+    background-position: 0;
+  }
+`;
+
+const socialLinkItems = [
+  {label: 'podcast', target: '_blank', href: 'https://podcast.ru/1591909301'},
+  {label: 'linkedin', target: '_blank', href: 'https://www.linkedin.com/company/kotelov'},
+  {label: 'яндекс.дзен', target: '_blank', href: 'https://zen.yandex.ru/kotelov'},
+  {
+    label: 'tiktok',
+    target: '_blank',
+    href: 'https://www.tiktok.com/@kotelov_com?lang=ru-RU&amp;is_copy_url=1&amp;is_from_webapp=v1',
+  },
+  {label: 'вконтакте', target: '_blank', href: 'https://vk.com/kotelov_com'},
+  {label: 'youtube', target: '_blank', href: 'https://www.youtube.com/channel/UCki5zCJQYBWYfK4wtH94xpQ/featured'},
+  {label: 'telegram', target: '_blank', href: 'https://t.me/evgeny_shmakov'},
+];
+
+const linkItems = [
+  {label: 'Кейсы', href: 'https://kotelov.com/cases/'},
+  {label: 'Аутстаффинг', href: 'https://kotelov.com/outstuff/'},
+  {label: 'Тестирование ПО', href: 'https://kotelov.com/testirovanie_na_zakaz/'},
+  {label: 'Блог', href: 'https://kotelov.com/blog/'},
+  {label: 'HR', href: 'https://kotelov.com/hr/'},
+  {label: 'О нас', href: 'https://kotelov.com/team/'},
+  {label: 'Контакты', href: 'https://kotelov.com/contacts/'},
+];
+
 export const Footer = () => (
   <Container>
     <Content>
@@ -130,33 +194,23 @@ export const Footer = () => (
         </Email>
         <Link href="tel://+79537647035">+7 953 764 70 35</Link>
       </Contacts>
+      <Nav>
+        <Ul>
+          {linkItems.map(({label, ...props}, index) => (
+            <Li key={index}>
+              <NavLink {...props}>{label}</NavLink>
+            </Li>
+          ))}
+        </Ul>
+      </Nav>
       <Note>
         <Copyright>© IT Angels, {new Date().getFullYear()}</Copyright>
         <Social>
-          <SocialLink target="_blank" href="https://podcast.ru/1591909301">
-            podcast
-          </SocialLink>
-          <SocialLink target="_blank" href="https://www.linkedin.com/company/kotelov">
-            linkedin
-          </SocialLink>
-          <SocialLink target="_blank" href="https://zen.yandex.ru/kotelov">
-            яндекс.дзен
-          </SocialLink>
-          <SocialLink
-            target="_blank"
-            href="https://www.tiktok.com/@kotelov_com?lang=ru-RU&amp;is_copy_url=1&amp;is_from_webapp=v1"
-          >
-            tiktok
-          </SocialLink>
-          <SocialLink className="вконтакте" target="_blank" href="https://vk.com/kotelov_com">
-            вконтакте
-          </SocialLink>
-          <SocialLink target="_blank" href="https://www.youtube.com/channel/UCki5zCJQYBWYfK4wtH94xpQ/featured">
-            youtube
-          </SocialLink>
-          <SocialLink target="_blank" href="https://t.me/evgeny_shmakov">
-            telegram
-          </SocialLink>
+          {socialLinkItems.map(({label, ...props}, index) => (
+            <SocialLink key={index} {...props}>
+              {label}
+            </SocialLink>
+          ))}
         </Social>
       </Note>
     </Content>

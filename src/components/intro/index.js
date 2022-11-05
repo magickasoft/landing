@@ -3,7 +3,7 @@ import SC from '@emotion/styled';
 import Grid from '@mui/material/Grid';
 import {Element} from 'react-scroll';
 import {Label, Section} from '../common';
-import {maxDevice, minDevice, theme} from '../../styles';
+import {maxDevice, minDevice} from '../../styles';
 import {Item} from './item';
 import {list} from './data';
 
@@ -12,7 +12,21 @@ const Container = SC.div`
   // background-position: center;
   // background-repeat: no-repeat;
   // background-size: cover;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   overflow: hidden;
+  @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 `;
 
 const Layout = SC(Section)`
