@@ -5,8 +5,6 @@ import {maxDevice, minDevice} from '../styles';
 // import Link from 'next/link';
 
 const Container = SC.footer`
-  z-index: 9999;
-  background: #fff;
   padding: 0 140px 0.75rem 140px;
   @media ${maxDevice.tablet} {
     padding: 0 30px 0.75rem 30px;

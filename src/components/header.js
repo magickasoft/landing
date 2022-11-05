@@ -1,12 +1,13 @@
 import React from 'react';
 import SC from '@emotion/styled';
+import {ScrollIndicator} from './scrollIndicator';
 import {Icon} from './icon';
 import {Text} from './common';
 import {maxDevice} from '../styles';
 
 const Container = SC.header`
   background: ${({active}) => (active ? '#ffffff38' : '#ffffff')};
-  z-index: 9999;
+  z-index: 9998;
   position: fixed;
   top: 0;
   left: 0;
@@ -54,38 +55,45 @@ const Row = SC.div`
   flex-direction: row;
 `;
 
-const useHeaderScroll = () => {
+const useScroll = () => {
   const [active, setActive] = React.useState(false);
 
+  const onScroll = () => {
+    setActive(window?.scrollY >= 400);
+  };
+
   React.useEffect(() => {
-    window?.addEventListener('scroll', () => {
-      setActive(window?.scrollY >= 400);
-    });
+    window?.addEventListener('scroll', onScroll);
+
+    return () => window?.removeEventListener('scroll', onScroll);
   }, []);
 
   return [active];
 };
 
 export const Header = props => {
-  const [active] = useHeaderScroll();
+  const [active] = useScroll();
 
   return (
-    <Container active={active}>
-      <Text>
-        <strong>IT Angels</strong>
-      </Text>
-      <Row>
-        <Label>
-          <Link href="tel://+79537647035">+7 953 764 70 35</Link>
-          <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
-        </Label>
-        <Link href="https://t.me/evgeny_shmakov">
-          <SCIcon name="telegram" size={32} />
-        </Link>
-        <Link href="https://wa.me/79537647035">
-          <SCIcon name="whatsApp" size={32} />
-        </Link>
-      </Row>
-    </Container>
+    <>
+      <ScrollIndicator />
+      <Container active={active}>
+        <Text>
+          <strong>IT Angels</strong>
+        </Text>
+        <Row>
+          <Label>
+            <Link href="tel://+79537647035">+7 953 764 70 35</Link>
+            <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
+          </Label>
+          <Link href="https://t.me/evgeny_shmakov">
+            <SCIcon name="telegram" size={32} />
+          </Link>
+          <Link href="https://wa.me/79537647035">
+            <SCIcon name="whatsApp" size={32} />
+          </Link>
+        </Row>
+      </Container>
+    </>
   );
 };

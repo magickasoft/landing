@@ -1,14 +1,14 @@
 export const list = [
   {
-    label: 'title',
+    label: 'title 1',
     text: 'description',
   },
   {
-    label: 'title',
+    label: 'title 2',
     text: 'description',
   },
   {
-    label: 'title',
+    label: 'title 3',
     text: 'description',
   },
 ];
