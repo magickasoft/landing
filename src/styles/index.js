@@ -15,9 +15,9 @@ export const GlobalStyle = props => (
     styles={css`
       html,
       body {
-        //background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        //background-size: 400% 400%;
-        //animation: gradient 15s ease infinite;
+        background: linear-gradient(-45deg, #7dc6e3, #f3d7df, #ffffff, #73ccb6);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
         transition: 0s;
         font-size: 1.125rem;
         line-height: 1.5rem;
@@ -28,6 +28,7 @@ export const GlobalStyle = props => (
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
           Droid Sans, Helvetica Neue, sans-serif;
       }
+
       @keyframes gradient {
         0% {
           background-position: 0% 50%;
@@ -44,6 +45,7 @@ export const GlobalStyle = props => (
         background: 0 0;
         text-decoration: none;
         cursor: pointer;
+
         &:not([href]) {
           cursor: initial;
         }

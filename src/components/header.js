@@ -6,7 +6,7 @@ import {Text} from './common';
 import {maxDevice} from '../styles';
 
 const Container = SC.header`
-  background: ${({active}) => (active ? '#ffffff38' : '#ffffff')};
+  background: ${({active}) => (active ? '#ffffff05' : '#ffffff05')};
   z-index: 9998;
   position: fixed;
   top: 0;
