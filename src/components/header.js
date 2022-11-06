@@ -23,10 +23,6 @@ const Container = SC.header`
     padding: 0 30px;
     height: 3.5rem;
   }
-  @media ${maxDevice.mobileL} {
-    padding: 0 30px;
-    height: 3.5rem;
-  }
 `;
 
 const SCIcon = SC(Icon)`

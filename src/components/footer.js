@@ -9,9 +9,6 @@ const Container = SC.footer`
   @media ${maxDevice.tablet} {
     padding: 0 30px 0.75rem 30px;
   }
-  @media ${maxDevice.mobileL} {
-    padding: 0 30px 0.75rem 30px;
-  }
 `;
 
 const Content = SC.div`
