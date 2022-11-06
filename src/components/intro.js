@@ -5,16 +5,7 @@ import {Element} from 'react-scroll';
 import {maxDevice, minDevice} from '../styles';
 import {Label, Section} from './common';
 
-const Container = SC.div`
-  // background-image: url("/static/images/cover.jpeg");
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-`;
-
 const Layout = SC(Section)`
-  // background: rgb(0,0,0);
-  // background: linear-gradient(0.69deg, #000000 0.73%, rgba(0, 0, 0, 0) 38.64%), linear-gradient(180deg, rgba(0, 5, 24, 0.67) 0%, rgba(0, 36, 52, 0.0201) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.3015) 100%);
   display: flex;
   align-items: flex-end;
   padding: 120px 140px 90px 140px;
@@ -129,21 +120,19 @@ const SourceItem = ({src, srcSet}) => (
 
 export const Intro = props => (
   <Element name="intro">
-    <Container>
-      <Layout>
-        <div>
-          <Content>
-            <Label>Создаём IT команды для технологических проектов</Label>
-          </Content>
-          <Companies>
-            <Ul>
-              {companiesList.map((o, i) => (
-                <SourceItem key={i} {...o} />
-              ))}
-            </Ul>
-          </Companies>
-        </div>
-      </Layout>
-    </Container>
+    <Layout>
+      <div>
+        <Content>
+          <Label>Создаём IT команды для технологических проектов</Label>
+        </Content>
+        <Companies>
+          <Ul>
+            {companiesList.map((o, i) => (
+              <SourceItem key={i} {...o} />
+            ))}
+          </Ul>
+        </Companies>
+      </div>
+    </Layout>
   </Element>
 );
