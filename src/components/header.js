@@ -1,12 +1,13 @@
 import SC from '@emotion/styled';
 import React from 'react';
 
-import {maxDevice} from '../styles';
+import {ibmplexsans400,maxDevice} from '../styles';
 import {Text} from './common';
 import {Icon} from './icon';
 import {ScrollIndicator} from './scrollIndicator';
 
 const Container = SC.header`
+  font-family: ${ibmplexsans400.style.fontFamily};
   background: ${({active}) => (active ? '#ffffff05' : '#ffffff05')};
   z-index: 9998;
   position: fixed;

@@ -1,10 +1,11 @@
 import SC from '@emotion/styled';
 import React from 'react';
 
-import {maxDevice, minDevice} from '../styles';
+import {ibmplexsans400,maxDevice, minDevice} from '../styles';
 // import Link from 'next/link';
 
 const Container = SC.footer`
+  font-family: ${ibmplexsans400.style.fontFamily};
   padding: 0 140px 0.75rem 140px;
   @media ${maxDevice.tablet} {
     padding: 0 30px 0.75rem 30px;

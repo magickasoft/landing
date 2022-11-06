@@ -3,7 +3,6 @@ import React from 'react';
 
 import {minDevice} from '../styles';
 
-
 const Container = SC.div`
   overflow: hidden;
   padding: 18px 0;
@@ -45,62 +44,28 @@ const Img = SC.img`
 `;
 
 const companiesList = [
-  {
-    srcSet: '/static/companies/bck.webp',
-    src: '/static/companies/bck.png',
-  },
-  {
-    srcSet: '/static/companies/vileda.webp',
-    src: '/static/companies/vileda.png',
-  },
-  {
-    srcSet: '/static/companies/euroxim.webp',
-    src: '/static/companies/euroxim.png',
-  },
-  {
-    srcSet: '/static/companies/bks.webp',
-    src: '/static/companies/bks.png',
-  },
-  {
-    srcSet: '/static/companies/sber.webp',
-    src: '/static/companies/sber.png',
-  },
-  {
-    srcSet: '/static/companies/rostelekom.webp',
-    src: '/static/companies/rostelekom.png',
-  },
-  {
-    srcSet: '/static/companies/lanit.webp',
-    src: '/static/companies/lanit.png',
-  },
-  {
-    srcSet: '/static/companies/tkb.webp',
-    src: '/static/companies/tkb.png',
-  },
-  {
-    srcSet: '/static/companies/ibs.webp',
-    src: '/static/companies/ibs.png',
-  },
-  {
-    srcSet: '/static/companies/bfggroup.webp',
-    src: '/static/companies/bfggroup.png',
-  },
+  {src: '/static/companies/1.sber.svg', alt: 'sber'},
+  {src: '/static/companies/2.rosselhoz.svg', alt: 'rosselhoz'},
+  {src: '/static/companies/3.gazprombank.svg', alt: 'gazprombank'},
+  {src: '/static/companies/4.bks.svg', alt: 'bks'},
+  {src: '/static/companies/5.mkb.svg', alt: 'mkb'},
+  {src: '/static/companies/6.otkritie.svg', alt: 'otkritie'},
+  {src: '/static/companies/7.rosbank.svg', alt: 'rosbank'},
+  {src: '/static/companies/8.sovkombank.svg', alt: 'sovkombank'},
+  {src: '/static/companies/9.tinkoff.svg', alt: 'tinkoff'},
+  {src: '/static/companies/11.sbibank.svg', alt: 'sbibank'},
+  {src: '/static/companies/12.akbarsbank.svg', alt: 'akbarsbank'},
+  {src: '/static/companies/13.vbrr.svg', alt: 'vbrr'},
+  {src: '/static/companies/14.bankci.svg', alt: 'bankci'},
 ];
-
-const SourceItem = ({src, srcSet}) => (
-  <Li>
-    <picture>
-      {srcSet && <source srcSet={srcSet} type="image/webp" />}
-      {src && <Img src={src} alt="" loading="eager" width="177" height="62" />}
-    </picture>
-  </Li>
-);
 
 export const CompaniesList = props => (
   <Container>
     <Ul>
       {companiesList.map((o, i) => (
-        <SourceItem key={i} {...o} />
+        <Li key={i}>
+          <Img {...o} loading="eager" />
+        </Li>
       ))}
     </Ul>
   </Container>

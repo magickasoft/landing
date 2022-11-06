@@ -2,10 +2,11 @@ import SC from '@emotion/styled';
 import React from 'react';
 import {Element} from 'react-scroll';
 
-import {maxDevice} from '../styles';
+import {ibmplexsans400,maxDevice} from '../styles';
 import {CompaniesList} from './companiesList';
 
 const Container = SC.div`
+  font-family: ${ibmplexsans400.style.fontFamily};
   padding: 23vh 140px 0 140px;
   @media ${maxDevice.tablet} {
     padding: 18vh 30px 0 30px;
