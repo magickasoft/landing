@@ -1,8 +1,9 @@
+import {css,Global} from '@emotion/react';
 import React from 'react';
-import {Global, css} from '@emotion/react';
+
 import {colors, formatterColor} from './colors';
 
-export {size, maxDevice, minDevice} from './device';
+export {maxDevice, minDevice,size} from './device';
 
 export const theme = {
   colors,
@@ -38,6 +39,14 @@ export const GlobalStyle = props => (
         }
         100% {
           background-position: 0% 50%;
+        }
+      }
+      @keyframes logosRunningLine {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-100% + 100vw));
         }
       }
 

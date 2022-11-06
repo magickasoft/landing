@@ -1,11 +1,12 @@
-import React from 'react';
 import SC from '@emotion/styled';
 import Grid from '@mui/material/Grid';
+import React from 'react';
 import {Element} from 'react-scroll';
+
 import {maxDevice, minDevice, theme} from '../../styles';
+import {Label} from '../common';
 import {list} from './data';
 import {Item} from './item';
-import {Label} from '../common';
 
 const List = SC(Grid)`
   padding: 20px 40px;

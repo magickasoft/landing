@@ -1,6 +1,7 @@
-import React from 'react';
 import Head from 'next/head';
+import React from 'react';
 import {Events, scrollSpy} from 'react-scroll';
+
 import {Intro} from '../components';
 
 function Home(props) {

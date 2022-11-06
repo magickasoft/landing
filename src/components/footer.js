@@ -1,5 +1,5 @@
-import React from 'react';
 import SC from '@emotion/styled';
+import React from 'react';
 
 import {maxDevice, minDevice} from '../styles';
 // import Link from 'next/link';
@@ -202,7 +202,7 @@ export const Footer = () => (
         </Ul>
       </Nav>
       <Note>
-        <Copyright>© IT Angels, {new Date().getFullYear()}</Copyright>
+        <Copyright>© IT enjoy, {new Date().getFullYear()}</Copyright>
         <Social>
           {socialLinkItems.map(({label, ...props}, index) => (
             <SocialLink key={index} {...props}>

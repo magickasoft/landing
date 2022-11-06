@@ -1,16 +1,17 @@
-import React from 'react';
-import Script from 'next/script';
+import {CacheProvider} from '@emotion/react';
+import {CssBaseline} from '@mui/material';
+import {ThemeProvider} from '@mui/material/styles';
 import Head from 'next/head';
 import Router, {useRouter} from 'next/router';
-import {Header, Footer} from '../components';
-import {pageview, GA_MEASUREMENT_ID} from '../helpers/gtag';
-import {withYM, YA_METRIKA_ID} from '../helpers/ym';
-import {ThemeProvider} from '@mui/material/styles';
-import {CssBaseline} from '@mui/material';
-import {CacheProvider} from '@emotion/react';
-import theme from '../styles/theme';
-import {GlobalStyle} from '../styles';
+import Script from 'next/script';
+import React from 'react';
+
+import {Footer,Header} from '../components';
 import {createEmotionCache} from '../helpers/createEmotionCache';
+import {GA_MEASUREMENT_ID,pageview} from '../helpers/gtag';
+import {withYM, YA_METRIKA_ID} from '../helpers/ym';
+import {GlobalStyle} from '../styles';
+import theme from '../styles/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 

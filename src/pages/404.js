@@ -1,7 +1,8 @@
 import SC from '@emotion/styled';
 import Link from 'next/link';
-import {Icon} from '../components/icon';
+
 import {Page} from '../components';
+import {Icon} from '../components/icon';
 import {maxDevice} from '../styles';
 
 const Header = SC.div`

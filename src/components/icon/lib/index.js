@@ -7,10 +7,10 @@ import {matCap} from './matCap';
 import {online} from './online';
 import {percent} from './percent';
 import {safety} from './safety';
+import {telegram} from './telegram';
 import {tradeIn} from './tradeIn';
 import {voenIpot} from './voenIpot';
 import {whatsApp} from './whatsApp';
-import {telegram} from './telegram';
 
 export default {
   notFound,

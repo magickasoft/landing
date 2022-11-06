@@ -1,5 +1,6 @@
-import React from 'react';
 import SC from '@emotion/styled';
+import React from 'react';
+
 import {maxDevice} from '../styles';
 
 export const Label = SC.div`

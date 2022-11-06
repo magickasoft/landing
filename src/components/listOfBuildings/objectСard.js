@@ -1,6 +1,7 @@
-import React from 'react';
 import SC from '@emotion/styled';
 import Image from 'next/image';
+import React from 'react';
+
 import {minDevice, theme} from '../../styles';
 
 const Wrapper = SC.div`

@@ -1,9 +1,10 @@
-import React from 'react';
 import SC from '@emotion/styled';
-import {ScrollIndicator} from './scrollIndicator';
-import {Icon} from './icon';
-import {Text} from './common';
+import React from 'react';
+
 import {maxDevice} from '../styles';
+import {Text} from './common';
+import {Icon} from './icon';
+import {ScrollIndicator} from './scrollIndicator';
 
 const Container = SC.header`
   background: ${({active}) => (active ? '#ffffff05' : '#ffffff05')};
@@ -79,7 +80,7 @@ export const Header = props => {
       <ScrollIndicator />
       <Container active={active}>
         <Text>
-          <strong>IT Angels</strong>
+          <strong>IT enjoy</strong>
         </Text>
         <Row>
           <Label>
