@@ -1,5 +1,5 @@
 import {css, Global} from '@emotion/react';
-import { IBM_Plex_Sans } from '@next/font/google'
+import {IBM_Plex_Sans} from '@next/font/google';
 import React from 'react';
 
 import {colors, formatterColor} from './colors';

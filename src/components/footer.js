@@ -1,7 +1,7 @@
 import SC from '@emotion/styled';
 import React from 'react';
 
-import {ibmplexsans400,maxDevice, minDevice} from '../styles';
+import {ibmplexsans400, maxDevice, minDevice} from '../styles';
 // import Link from 'next/link';
 
 const Container = SC.footer`

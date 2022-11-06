@@ -1,7 +1,7 @@
 import SC from '@emotion/styled';
 import React from 'react';
 
-import {ibmplexsans400,maxDevice} from '../styles';
+import {ibmplexsans400, maxDevice} from '../styles';
 import {Text} from './common';
 import {Icon} from './icon';
 import {ScrollIndicator} from './scrollIndicator';

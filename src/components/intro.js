@@ -2,7 +2,7 @@ import SC from '@emotion/styled';
 import React from 'react';
 import {Element} from 'react-scroll';
 
-import {ibmplexsans400,maxDevice} from '../styles';
+import {ibmplexsans400, maxDevice} from '../styles';
 import {CompaniesList} from './companiesList';
 
 const Container = SC.div`
@@ -14,6 +14,7 @@ const Container = SC.div`
 `;
 
 const Brand = SC.h3`
+  font-weight: 400;
   margin: 0 0 12px 0;
   font-size: 56px;
   line-height: 1.3;

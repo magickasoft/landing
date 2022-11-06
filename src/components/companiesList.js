@@ -21,16 +21,13 @@ const Ul = SC.ul`
 
 const Li = SC.li`
   list-style-type: none;
-  max-width: 110px;
-  height: 39px;
+  height: 45px;
   margin: 0 20px;
-  opacity: 0.9;
   @media ${minDevice.tablet} {
     margin: 0 30px;
   }
   @media ${minDevice.laptop} {
-    max-width: 177px;
-    height: 62px;
+    height: 80px;
     margin: 0 42px;
   }
 `;
