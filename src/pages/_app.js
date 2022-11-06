@@ -6,9 +6,9 @@ import Router, {useRouter} from 'next/router';
 import Script from 'next/script';
 import React from 'react';
 
-import {Footer,Header} from '../components';
+import {Footer, Header} from '../components';
 import {createEmotionCache} from '../helpers/createEmotionCache';
-import {GA_MEASUREMENT_ID,pageview} from '../helpers/gtag';
+import {GA_MEASUREMENT_ID, pageview} from '../helpers/gtag';
 import {withYM, YA_METRIKA_ID} from '../helpers/ym';
 import {GlobalStyle} from '../styles';
 import theme from '../styles/theme';

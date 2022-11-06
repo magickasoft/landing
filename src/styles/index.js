@@ -1,9 +1,9 @@
-import {css,Global} from '@emotion/react';
+import {css, Global} from '@emotion/react';
 import React from 'react';
 
 import {colors, formatterColor} from './colors';
 
-export {maxDevice, minDevice,size} from './device';
+export {maxDevice, minDevice, size} from './device';
 
 export const theme = {
   colors,

@@ -1,4 +1,4 @@
-import {parseCookies,setCookie} from 'nookies';
+import {parseCookies, setCookie} from 'nookies';
 import React from 'react';
 
 export default function (ctx = null, name = 'cookies', maxAge = 30 * 24 * 60 * 60) {
