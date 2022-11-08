@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import {Events, scrollSpy} from 'react-scroll';
 
-import {Intro} from '../components';
+import {Clients,Intro} from '../components';
 
 function Home(props) {
   React.useEffect(() => {
@@ -47,6 +47,7 @@ function Home(props) {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Intro />
+      <Clients />
     </>
   );
 }

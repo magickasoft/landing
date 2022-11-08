@@ -1,4 +1,5 @@
 export {Button} from './button';
+export {Clients} from './clients';
 export {Label, Section, Text} from './common';
 export {Contact} from './contact';
 export {ContactForm} from './contactForm';
