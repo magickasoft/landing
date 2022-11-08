@@ -1,8 +1,8 @@
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import SC from '@emotion/styled';
-import {ArrowBackIos,ArrowForwardIos} from '@mui/icons-material';
+import {ArrowBackIos, ArrowForwardIos} from '@mui/icons-material';
 import React from 'react';
 import Slider from 'react-slick';
 
@@ -20,7 +20,7 @@ const Controls = SC.div`
 const Btn = SC.div`
   height: 2.5rem;
   width: 2.5rem;
-  opacity: ${({disabled}) => disabled ? 0.25 : 1};
+  opacity: ${({disabled}) => (disabled ? 0.25 : 1)};
 `;
 
 export const CustomSlider = ({initialSlide = 0, children, ...props}) => {
@@ -28,10 +28,10 @@ export const CustomSlider = ({initialSlide = 0, children, ...props}) => {
   const [hasSetPosition, setHasSetPosition] = React.useState(false);
 
   const settings = {
-    className: "center",
+    className: 'center',
     centerMode: true,
-    infinite: false,
-    autoplay: false,
+    infinite: true,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide,
