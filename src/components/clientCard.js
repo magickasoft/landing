@@ -113,7 +113,9 @@ const Position = SC.p`
 
 export const ClientCard = ({src, desc, position, executive}) => (
   <Container>
-    <Desc><P>{desc}</P></Desc>
+    <Desc>
+      <P>{desc}</P>
+    </Desc>
     <User>
       {src && (
         <Photo>
