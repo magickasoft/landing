@@ -10,4 +10,5 @@ export {Intro} from './intro';
 export {ListOfBuildings} from './listOfBuildings';
 export {Page} from './page';
 export {Select} from './select';
+export {WorkWithUs} from './workWithUs';
 export {Worth} from './worth';
