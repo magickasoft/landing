@@ -7,7 +7,7 @@ import {CustomSlider} from './customSlider';
 import {TechCard} from './techCard';
 
 const Container = SC.section`
-  background-image: linear-gradient(to bottom,#edecec 185px,#fff 185px);
+  background-image: linear-gradient(to bottom,#edecec 200px,#fff 200px);
   overflow: hidden;
   padding: 0 0 50px 0;
   @media ${maxDevice.tablet} {

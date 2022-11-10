@@ -23,7 +23,7 @@ const Btn = SC.div`
   opacity: ${({disabled}) => (disabled ? 0.25 : 1)};
 `;
 
-export const CustomSlider = ({initialSlide = 0, children, ...props}) => {
+export const CustomSlider = ({withControls = true, initialSlide = 0, children, ...props}) => {
   const slider = React.useRef();
   const [hasSetPosition, setHasSetPosition] = React.useState(false);
 
@@ -47,14 +47,16 @@ export const CustomSlider = ({initialSlide = 0, children, ...props}) => {
 
   return (
     <>
-      <Controls>
-        <Btn onClick={slider.current?.slickPrev}>
-          <ArrowBackIos />
-        </Btn>
-        <Btn onClick={slider.current?.slickNext}>
-          <ArrowForwardIos />
-        </Btn>
-      </Controls>
+      {withControls && (
+        <Controls>
+          <Btn onClick={slider.current?.slickPrev}>
+            <ArrowBackIos />
+          </Btn>
+          <Btn onClick={slider.current?.slickNext}>
+            <ArrowForwardIos />
+          </Btn>
+        </Controls>
+      )}
       <Slider ref={slider} {...settings}>
         {children}
       </Slider>

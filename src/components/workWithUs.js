@@ -133,6 +133,8 @@ const Link = SC.a`
   }
 `;
 
+const Img = SC.img``;
+
 export const WorkWithUs = props => (
   <Element name="workWithUs">
     <Container>
@@ -140,7 +142,7 @@ export const WorkWithUs = props => (
         <RightColumn>
           <H3>Работа у нас</H3>
           <SvgWrap>
-            <img alt="" src="/static/icon-work-with-us.svg" loading="eager" />
+            <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
           </SvgWrap>
           <Text>
             Люди — самый ценный актив нашего бизнеса, поэтому мы создаем максимально комфортную и продуктивную среду для

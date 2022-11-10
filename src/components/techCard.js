@@ -1,8 +1,7 @@
 import SC from '@emotion/styled';
-import Image from 'next/image';
 import React from 'react';
 
-import {minDevice, theme} from '../styles';
+import {minDevice} from '../styles';
 
 const Container = SC.div`
   margin: 20px;
@@ -86,7 +85,7 @@ const Li = SC.li`
 `;
 
 export const TechCard = ({items = []}) => (
-  <div>
+  <>
     {items.map((o, index) => (
       <Container key={index}>
         <Caption>
@@ -101,5 +100,5 @@ export const TechCard = ({items = []}) => (
         )}
       </Container>
     ))}
-  </div>
+  </>
 );
