@@ -13,7 +13,7 @@ const Container = SC.div`
   padding: 25px; 
   color: ${({index}) => (index % 2 === 1 ? '#fff' : '#222')};
   background-color: ${({index}) => (index % 2 === 1 ? '#222' : '#fff')};
-  box-shadow: 0 4px 44px rgb(0 0 0 / 15%);
+  box-shadow: 0 4px 14px 5px rgb(0 0 0 / 15%);
   border-radius: 30px;
   @media ${minDevice.laptop} {
     margin: 30px;
