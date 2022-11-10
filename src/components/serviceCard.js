@@ -2,14 +2,14 @@ import SC from '@emotion/styled';
 import Image from 'next/image';
 import React from 'react';
 
-import {minDevice} from '../styles';
+import {maxDevice,minDevice} from '../styles';
 
 const Container = SC.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 30px;
+  margin: 15px;
   padding: 25px; 
   color: ${({index}) => (index % 2 === 1 ? '#fff' : '#222')};
   background-color: ${({index}) => (index % 2 === 1 ? '#222' : '#fff')};
@@ -61,6 +61,9 @@ const Content = SC.div`
   display: flex;
   gap: 10px;
   margin-bottom: 5px;
+  @media ${maxDevice.tablet} {
+    display: none;
+  }
 `;
 
 const Label = SC.div`
@@ -72,6 +75,9 @@ const BenefitLabel = SC.div`
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 15px;
+  @media ${maxDevice.tablet} {
+    display: none;
+  }
   @media ${minDevice.laptop} {
     font-size: 16px;
     line-height: 18px;
