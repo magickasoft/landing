@@ -7,7 +7,7 @@ import {ClientCard} from './clientCard';
 import {CustomSlider} from './customSlider';
 
 const Container = SC.section`
-  // background-color: #edecec;
+  background-color: #edecec;
   overflow: hidden;
   padding: 0 0 140px 0;
   @media ${maxDevice.tablet} {
@@ -49,30 +49,6 @@ const slideData = [
     src: '/static/clients/Oleg_Borisov.jpeg',
     executive: 'Олег Борисов',
     position: 'Руководитель проектов группы компаний "ПИК"',
-  },
-  {
-    desc: 'За время работы над проектом разработчики под руководством IT enjoy показали себя как команда профессионалов, успешно решивших все поставленные перед ними задачи и достигнувших цели проекта',
-    src: '/static/clients/Dmitry_Butyanov.jpeg',
-    executive: 'Дмитрий Бутянов',
-    position: 'PBE Майкрософт РУС',
-  },
-  {
-    desc: 'Ребята из IT enjoy разработали масштабную систему, которая требовала крайне высокую техническую экспертность и позволила поднять сервис на борту самолетов на новый уровень',
-    src: '/static/clients/Alexander_Lukash.jpeg',
-    executive: 'Александр Лукаш',
-    position: 'Product owner S7 Airlines',
-  },
-  {
-    desc: 'Предложенные специалистами команды проектные решения по реализации требуемого функционала, позволили на выходе получить высококачественный продукт с удобным пользовательским интерфейсом. Все поставленные задачи выполнены в срок и в полном объеме',
-    src: '/static/clients/Belimov_Alexander.jpeg',
-    executive: 'Белимов Александр',
-    position: 'Директор проектов RostelecomLabs',
-  },
-  {
-    desc: 'За время сотрудничества по ряду проектов компания IT enjoy зарекомендовала себя, как надежный партнер, всегда стремящийся максимально эффективно решить поставленные задачи, подобрать необходимые ресурсы. ',
-    src: '/static/clients/Kirill_Makarkin.jpeg',
-    executive: 'Кирилл Макаркин',
-    position: 'Руководитель проектов цифровизации Брусники',
   },
 ];
 
