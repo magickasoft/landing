@@ -1,5 +1,5 @@
 import SC from '@emotion/styled';
-import Image from 'next/image'
+import Image from 'next/image';
 import React from 'react';
 
 import {minDevice} from '../styles';
@@ -11,8 +11,8 @@ const Container = SC.div`
   align-items: flex-start;
   margin: 30px;
   padding: 25px; 
-  color: ${({index}) => index % 2 === 1 ? '#fff' : '#222'};
-  background-color: ${({index}) => index % 2 === 1 ? '#222' : '#fff'};
+  color: ${({index}) => (index % 2 === 1 ? '#fff' : '#222')};
+  background-color: ${({index}) => (index % 2 === 1 ? '#222' : '#fff')};
   box-shadow: 0 4px 44px rgb(0 0 0 / 15%);
   border-radius: 30px;
   @media ${minDevice.laptop} {
@@ -68,7 +68,7 @@ const Label = SC.div`
   line-height: 18px;
 `;
 
-const BenefitLabel= SC.div`
+const BenefitLabel = SC.div`
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 15px;
