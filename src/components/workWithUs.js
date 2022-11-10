@@ -7,7 +7,7 @@ import {ibmplexsans400, maxDevice, minDevice} from '../styles';
 const Container = SC.section`
   overflow: hidden;
   position: relative;
-  // background-color: #edecec;
+  background-color: #edecec;
   padding: 20px 0 40px;
   margin: -20px 0 0;
   @media ${minDevice.tablet} {

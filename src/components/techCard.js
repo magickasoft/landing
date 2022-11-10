@@ -5,125 +5,97 @@ import React from 'react';
 import {minDevice, theme} from '../styles';
 
 const Container = SC.div`
-  margin: 0 auto;
-  max-width: 1374px;
-  padding: 0 20px;
-  width: 100%;
-  @media ${minDevice.tablet} {
-    padding: 0 32px;
-  }
+  margin: 20px;
+  padding: 21px 34px 15px 28px;
+  background: #FFF;
+  box-shadow: 0 4px 14px 5px rgb(0 0 0 / 5%);
+  border-radius: 20px;
   @media ${minDevice.laptop} {
-    padding: 0 15px;
+    margin: 30px;
+    padding: 30px 25px 20px;
+    box-shadow: 0 4px 18px 8px rgb(0 0 0 / 6%);
+    border-radius: 30px;
   }
 `;
 
-const Desc = SC.div`
-  background: url('/static/icon-quote.svg') no-repeat 0 0;
-  background-size: 1.5rem auto;
-  max-width: 62.5rem;
-  padding: 0 0 0 3.75rem;
+const Caption = SC.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 10px;
+  @media ${minDevice.laptop} {
+        position: relative;
+  }
+`;
+
+const Title = SC.div`
   position: relative;
-  @media ${minDevice.tablet} {
-    background-size: 2.4375rem auto;
-    padding: 0 0 0 8.875rem;
-  }
+  display: inline-block;
+  padding: 5px 0 5px 22px;
+  font-size: 14px;
+  line-height: 17px;
   @media ${minDevice.laptop} {
-    padding: 0 0 0 10.5rem;
+    font-size: 18px;
+    line-height: 22px;
+    color: #E13737;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url(/static/technology.svg) no-repeat center / contain;
+    @media ${minDevice.laptop} {
+      background: url(/static/technology-black.svg) no-repeat center / contain;
+    }
   }
 `;
 
-const P = SC.p`
-  font-size: 1rem;
-  line-height: 1.375rem;
-  margin: 0 0 1.125rem;
-  @media ${minDevice.tablet} {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 0 0 2.375rem;
-  }
-  @media ${minDevice.laptop} {
-    margin: 0 0 2.5rem;
-  }
-`;
-
-const User = SC.div`
-  margin: 0 0 0 3.625rem;
-  padding: 0 0 0 2.875rem;
-  position: relative;
-  @media ${minDevice.tablet} {
-    margin: 0 0 0 8.875rem;
-    padding: 0 0 0 3.5rem;
-  }
-  @media ${minDevice.laptop} {
-    margin: 0 0 0 10.5rem;
-    padding: 0 0 0 4rem;
-  }
-`;
-
-const Photo = SC.div`
-  height: 2.25rem;
-  left: 0;
-  padding: 0.15625rem;
-  position: absolute;
-  top: -0.15625rem;
-  width: 2.25rem;
-  @media ${minDevice.tablet} {
-    height: 2.8125rem;
-    top: 0;
-    width: 2.8125rem;
-  }
-`;
-
-const Img = SC.img`
-  border-radius: 50%;
-  display: block;
+const Ul = SC.ul`
+  height: 42px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0;
+  margin: 0 -3px 0 -2px;
   height: auto;
-  width: 2rem;
-  @media ${minDevice.tablet} {
-    width: 2.5rem;
-  }
+  overflow: hidden;
+  transition: all .3s ease;
 `;
 
-const H4 = SC.h4`
-  font-weight: 400;
-  font-size: .6875rem;
-  line-height: .875rem;
-  margin: 0.1875rem 0 0.125rem;
-  @media ${minDevice.tablet} {
-    font-size: 1rem;
-    line-height: 1.375rem;
-    margin: 0 0 0.25rem;
-  }
-`;
-
-const Position = SC.p`
-  color: #828290;
-  font-size: .6875rem;
-  line-height: .875rem;
-  margin: 0 0 0.1875rem;
-  @media ${minDevice.tablet} {
-    font-size: .875rem;
-    line-height: 1.125rem;
-    margin: 0;
-  }
+const Li = SC.li`
+  display: inline-block;
+  padding: 4px 18px;
+  margin: 0 3px 5px 2px;
+  border: 1px solid #E7E7E9;
+  box-sizing: border-box;
+  border-radius: 30px;
+  list-style: none;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
   @media ${minDevice.laptop} {
-    font-size: 1rem;
+    font-size: 14px;
+    line-height: 27px;
+    padding: 0 18px;
+    margin: 0 3px 13px 2px;
   }
 `;
 
-export const TechCard = ({src, desc, position, executive}) => (
+export const TechCard = ({label, list = []}) => (
   <Container>
-    <Desc>
-      <P>{desc}</P>
-    </Desc>
-    <User>
-      {src && (
-        <Photo>
-          <Img src={src} loading="eager" alt={executive} />
-        </Photo>
-      )}
-      {executive && <H4>{executive}</H4>}
-      {position && <Position>{position}</Position>}
-    </User>
+    <Caption>
+      <Title>{label}</Title>
+    </Caption>
+    {Boolean(list?.length) && (
+      <Ul>
+        {list.map((o,i) => (
+          <Li key={i}>{o}</Li>
+        ))}
+      </Ul>
+    )}
   </Container>
 );

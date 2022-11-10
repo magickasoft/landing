@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import {Events, scrollSpy} from 'react-scroll';
 
-import {Clients, Intro, Services,TechStacks, WorkWithUs} from '../components';
+import {Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
 
 function Home(props) {
   React.useEffect(() => {

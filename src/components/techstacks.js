@@ -7,6 +7,7 @@ import {CustomSlider} from './customSlider';
 import {TechCard} from './techCard';
 
 const Container = SC.section`
+  // background-image: linear-gradient(to bottom,#edecec 185px,#fff 185px);
   overflow: hidden;
   padding: 0 0 140px 0;
   @media ${maxDevice.tablet} {
@@ -38,40 +39,40 @@ const H3 = SC.h3`
 
 const slideData = [
   {
-    desc: 'Крутая команда профессионалов, быстро адаптирующаяся под периодически изменяемые требования заказчика, качественно и в срок выполняющая поставленные задачи',
-    src: '/static/clients/Kovtun_Anastasia.jpeg',
-    executive: 'Ковтун Анастасия',
-    position: 'Руководитель проектов S7 Airlines',
+    label: 'Backend',
+    list: ['Java SE 8/11/18', 'Spring', 'Spring Boot', 'Hibernate', 'C#: NET', 'NET Core', 'ASP.NET Core', 'PHP', 'Ruby', 'Node JS', 'Python', 'Go', 'Dart', 'Redis', 'MongoDB', 'Kafka', 'RabbitMQ', 'ActiveMQ'],
   },
   {
-    desc: 'IT enjoy оперативно предоставил мобильных и бэкенд разработчиков, что позволило усилить команду и точечно ускорить развитие проектов',
-    src: '/static/clients/Oleg_Borisov.jpeg',
-    executive: 'Олег Борисов',
-    position: 'Руководитель проектов группы компаний "ПИК"',
+    label: 'Frontend',
+    list: ['JavaScript', 'Typescript', 'HTML5', 'CSS3', 'SASS', 'Less', 'React', 'Vue.js', 'Angular 6+', 'Redux', 'redux-saga', 'redux-toolkit', 'vuex', 'Rest', 'WebSockets', 'css modules', 'css-in-js', 'docker', 'postman', 'jest', 'SSR', 'styled-component', 'Flux', 'Mobx', 'Redux Thunk', 'next js / nuxt js', 'Axios', 'Formik', 'Redux Form', 'Yep', 'Husky', 'ESlint', 'Prettier', 'Commitlint', 'JSLint', 'Ant Design', 'Material UI', 'webpack', 'gulp.js', 'Babel', 'ES6', 'Stylus', 'CoffeeScript', 'Rollup', 'Lerna', 'Storybook', 'react-query', 'Apollo Client'],
   },
   {
-    desc: 'За время работы над проектом разработчики под руководством IT enjoy показали себя как команда профессионалов, успешно решивших все поставленные перед ними задачи и достигнувших цели проекта',
-    src: '/static/clients/Dmitry_Butyanov.jpeg',
-    executive: 'Дмитрий Бутянов',
-    position: 'PBE Майкрософт РУС',
+    label: 'Platform apps',
+    list: ['Swift', 'Kotlin', 'Dagger 2', 'Xcode', 'Android Studio', 'React Native', 'Flutter', 'Xamarin', 'Detox', 'Appium'],
   },
   {
-    desc: 'Ребята из IT enjoy разработали масштабную систему, которая требовала крайне высокую техническую экспертность и позволила поднять сервис на борту самолетов на новый уровень',
-    src: '/static/clients/Alexander_Lukash.jpeg',
-    executive: 'Александр Лукаш',
-    position: 'Product owner S7 Airlines',
+    label: 'DevOps',
+    list: ['Jenkins', 'TeamCity', 'GitLab', 'Bamboo', 'Github Actions', 'AWS CodePipeline', 'Terraform', 'Puppet', 'Ansible', 'AWS', 'Google Cloud Platform', 'Microsoft Azure', 'Huawei Cloud', 'Яндекс Облако', 'Mail.ru Cloud Solutions', 'Prometheus', 'Grafana', 'ELK Stack', 'Graylog', 'Grafana', 'Jaeger', 'Docker', 'Podman', 'Kubernetes', 'Rancher', 'Serverless'],
   },
   {
-    desc: 'Предложенные специалистами команды проектные решения по реализации требуемого функционала, позволили на выходе получить высококачественный продукт с удобным пользовательским интерфейсом. Все поставленные задачи выполнены в срок и в полном объеме',
-    src: '/static/clients/Belimov_Alexander.jpeg',
-    executive: 'Белимов Александр',
-    position: 'Директор проектов RostelecomLabs',
+    label: 'QA',
+    list: ['TestRail', 'SQL', 'NoSQL', 'Postman', 'Swagger', 'Fiddler', 'Charles', 'JMeter', 'SoapUI', 'Docker', 'Kafka', 'XCode', 'Android Studio', 'Selenium', 'Hermione', 'Nightwatch', 'Detox', 'Appium', 'AVA + Sinon.js', 'Jest', 'Mocha', 'Chai'],
   },
   {
-    desc: 'За время сотрудничества по ряду проектов компания IT enjoy зарекомендовала себя, как надежный партнер, всегда стремящийся максимально эффективно решить поставленные задачи, подобрать необходимые ресурсы. ',
-    src: '/static/clients/Kirill_Makarkin.jpeg',
-    executive: 'Кирилл Макаркин',
-    position: 'Руководитель проектов цифровизации Брусники',
+    label: 'Analytics',
+    list: [''],
+  },
+  {
+    label: 'Design',
+    list: ['Sketch', 'Adobe XD', 'UXPin', 'InVision', 'Flinto', 'Principle', 'Justinmind', 'Axure', 'Keynote', 'Hotjar', 'figma'],
+  },
+  {
+    label: 'Product management / Project management',
+    list: [''],
+  },
+  {
+    label: 'C-level',
+    list: ['CEO', 'CMO', 'CFO', 'CAO', 'CIO', 'CVO', 'COO', 'CSO', 'CTO'],
   },
 ];
 
@@ -81,7 +82,38 @@ export const TechStacks = props => (
       <Content>
         <H3>Технологии</H3>
       </Content>
-      <CustomSlider>
+      <CustomSlider
+        responsive={[
+          {
+            breakpoint: 2560,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 1440,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]}
+      >
         {slideData.map((o, i) => (
           <TechCard key={i} {...o} />
         ))}

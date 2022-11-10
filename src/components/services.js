@@ -7,6 +7,7 @@ import {ClientCard} from './clientCard';
 import {CustomSlider} from './customSlider';
 
 const Container = SC.section`
+  // background-color: #edecec;
   overflow: hidden;
   padding: 0 0 140px 0;
   @media ${maxDevice.tablet} {
