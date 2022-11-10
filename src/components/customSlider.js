@@ -30,8 +30,8 @@ export const CustomSlider = ({initialSlide = 0, children, ...props}) => {
   const settings = {
     className: 'center',
     centerMode: true,
-    infinite: false,
-    autoplay: false,
+    infinite: true,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide,

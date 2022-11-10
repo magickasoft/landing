@@ -84,23 +84,22 @@ const Li = SC.li`
     margin: 0 3px 13px 2px;
   }
 `;
-// items {label, list = []}
+
 export const TechCard = ({items = []}) => (
-  <>
-    {Boolean(items?.length) &&
-      items.map((o, index) => (
-        <Container key={index}>
-          <Caption>
-            <Title>{o?.label}</Title>
-          </Caption>
-          {Boolean(o?.list?.length) && (
-            <Ul>
-              {o?.list.map((o, i) => (
-                <Li key={i}>{o}</Li>
-              ))}
-            </Ul>
-          )}
-        </Container>
-      ))}
-  </>
+  <div>
+    {items.map((o, index) => (
+      <Container key={index}>
+        <Caption>
+          <Title>{o?.label}</Title>
+        </Caption>
+        {Boolean(o?.list?.length) && (
+          <Ul>
+            {o?.list.map((o, i) => (
+              <Li key={i}>{o}</Li>
+            ))}
+          </Ul>
+        )}
+      </Container>
+    ))}
+  </div>
 );

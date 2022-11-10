@@ -63,6 +63,33 @@ const slideData = [
           'ActiveMQ',
         ],
       },
+      {
+        label: 'QA',
+        list: [
+          'TestRail',
+          'SQL',
+          'NoSQL',
+          'Postman',
+          'Swagger',
+          'Fiddler',
+          'Charles',
+          'JMeter',
+          'SoapUI',
+          'Docker',
+          'Kafka',
+          'XCode',
+          'Android Studio',
+          'Selenium',
+          'Hermione',
+          'Nightwatch',
+          'Detox',
+          'Appium',
+          'AVA + Sinon.js',
+          'Jest',
+          'Mocha',
+          'Chai',
+        ],
+      },
     ],
   },
   {
@@ -141,7 +168,7 @@ const slideData = [
       },
       {
         label: 'Analytics',
-        list: [''],
+        list: ['Excel', 'Keynote, SQL', 'Python', 'Pandas', 'Power BI', 'Tableau', 'QlikView', 'Miro', 'Visio', 'UML', 'BPMN', 'Confluence', 'Google Analytics', 'Heatmap', 'Looker', 'Pendo', 'Mixpanel', 'HockeyStack', 'Mode', 'Affise'],
       },
     ],
   },
@@ -178,45 +205,6 @@ const slideData = [
           'Serverless',
         ],
       },
-    ],
-  },
-  {
-    items: [
-      {
-        label: 'QA',
-        list: [
-          'TestRail',
-          'SQL',
-          'NoSQL',
-          'Postman',
-          'Swagger',
-          'Fiddler',
-          'Charles',
-          'JMeter',
-          'SoapUI',
-          'Docker',
-          'Kafka',
-          'XCode',
-          'Android Studio',
-          'Selenium',
-          'Hermione',
-          'Nightwatch',
-          'Detox',
-          'Appium',
-          'AVA + Sinon.js',
-          'Jest',
-          'Mocha',
-          'Chai',
-        ],
-      },
-      {
-        label: 'Product management / Project management',
-        list: [''],
-      },
-    ],
-  },
-  {
-    items: [
       {
         label: 'Design',
         list: [
@@ -232,6 +220,14 @@ const slideData = [
           'Hotjar',
           'figma',
         ],
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        label: 'Product management / Project management',
+        list: ['Pendo', 'Amplitude', 'ProductPlan', 'SurveyMonkey', 'Typeform', 'Zoom', 'Gartner', 'Sirius Decisions', 'Slack', 'Confluence', 'PowerPoint', 'Keynote', 'Jira', 'Pivotal Tracker', 'Trello', 'Split.io', 'LaunchDarkly', 'FullStory', 'Hotjar', 'Evernote', 'Google Drive'],
       },
       {
         label: 'C-level',
@@ -259,15 +255,15 @@ export const TechStacks = props => (
           {
             breakpoint: 1440,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 2,
+              slidesToShow: 2,
+              slidesToScroll: 1,
             },
           },
           {
             breakpoint: 1024,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2,
+              slidesToScroll: 1,
             },
           },
           {
