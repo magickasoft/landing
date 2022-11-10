@@ -81,13 +81,13 @@ export const Header = props => {
         </Text>
         <Row>
           <Label>
-            <Link href="tel://+79537647035">+7 953 764 70 35</Link>
+            <Link href="tel://+79601195445">+7 960 119 54 45</Link>
             <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
           </Label>
           <Link href="https://t.me/evgeny_shmakov">
             <SCIcon name="telegram" size={32} />
           </Link>
-          <Link href="https://wa.me/79537647035">
+          <Link href="https://wa.me/79601195445">
             <SCIcon name="whatsApp" size={32} />
           </Link>
         </Row>

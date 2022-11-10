@@ -188,7 +188,7 @@ export const Footer = () => (
         <Email>
           <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
         </Email>
-        <Link href="tel://+79537647035">+7 953 764 70 35</Link>
+        <Link href="tel://+79601195445">+7 960 119 54 45</Link>
       </Contacts>
       <Nav>
         <Ul>
