@@ -186,7 +186,7 @@ export const Footer = () => (
     <Content>
       <Contacts>
         <Email>
-          <Link href="mailto:es.shmakov@gmail.com">es.shmakov@gmail.com</Link>
+          <Link href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</Link>
         </Email>
         <Link href="tel://+79601195445">+7 960 119 54 45</Link>
       </Contacts>
@@ -200,7 +200,7 @@ export const Footer = () => (
         </Ul>
       </Nav>
       <Note>
-        <Copyright>© IT enjoy, {new Date().getFullYear()}</Copyright>
+        <Copyright>© madjoylab, {new Date().getFullYear()}</Copyright>
         <Social>
           {socialLinkItems.map(({label, ...props}, index) => (
             <SocialLink key={index} {...props}>
