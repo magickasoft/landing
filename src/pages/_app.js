@@ -52,6 +52,7 @@ function App({Component, emotionCache = clientSideEmotionCache, pageProps}) {
           доме, цены
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="yandex-verification" content="bed3ff7aa8f6b9a4" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
