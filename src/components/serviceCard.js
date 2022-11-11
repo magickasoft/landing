@@ -2,7 +2,7 @@ import SC from '@emotion/styled';
 import Image from 'next/image';
 import React from 'react';
 
-import {maxDevice,minDevice} from '../styles';
+import {maxDevice, minDevice} from '../styles';
 
 const Container = SC.div`
   display: flex;
