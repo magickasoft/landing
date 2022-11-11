@@ -48,8 +48,7 @@ function App({Component, emotionCache = clientSideEmotionCache, pageProps}) {
       <GlobalStyle />
       <Head>
         <title>
-          Новостройки Новосибирска: 🏢 купить квартиру в новостройке от застройщика, продажа недвижимости в строящемся
-          доме, цены
+          madjoylab | Создаём IT команды для технологических проектов
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="yandex-verification" content="bed3ff7aa8f6b9a4" />
