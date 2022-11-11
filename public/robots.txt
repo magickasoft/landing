@@ -3,11 +3,11 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://novostroiki-54.ru/
+Host: https://madjoylab.ru/
 
 # Sitemaps
-Sitemap: https://novostroiki-54.ru/sitemap.xml
-Sitemap: http://novostroiki-54.ru/sitemap.xml
+Sitemap: https://madjoylab.ru/sitemap.xml
+Sitemap: http://madjoylab.ru/sitemap.xml
 
-Sitemap: https://www.novostroiki-54.ru/sitemap.xml
-Sitemap: http://www.novostroiki-54.ru/sitemap.xml
+Sitemap: https://www.madjoylab.ru/sitemap.xml
+Sitemap: http://www.madjoylab.ru/sitemap.xml
