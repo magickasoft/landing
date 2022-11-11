@@ -34,7 +34,7 @@ module.exports = (phase) => {
   return {
     ...defaultConfig,
     env: {
-      gaMeasurementId: 'G-FK4B8GTXHB',
+      gaMeasurementId: 'G-835YWDPG94',
       yaMetrikaId: '88802971',
     },
   }
