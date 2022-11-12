@@ -148,10 +148,7 @@ export const WorkWithUs = props => (
             работы сотрудников. Станьте частью нашей команды и работайте над проектом, о котором вы с интересом будете
             рассказывать другим.
           </Text>
-          <Link
-            target="_blank"
-            href="https://forms.gle/cTnRi66ieWaJudhS9"
-          >
+          <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
             Присоединиться к команде
           </Link>
         </RightColumn>
