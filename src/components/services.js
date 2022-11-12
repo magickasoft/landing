@@ -67,6 +67,7 @@ export const Services = props => (
         <H3>Услуги</H3>
       </Content>
       <CustomSlider
+        centerMode={false}
         withControls={false}
         responsive={[
           {
