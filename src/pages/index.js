@@ -47,8 +47,8 @@ function Home(props) {
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:url" content="http://madjoylab.ru/" />
         <meta property="og:site_name" content="madjoylab" />
-        <meta property="og:image" content="/static/images/cover.jpeg" key="og:image" />
-        <meta property="twitter:image" content="/static/images/cover.jpeg" key="twitter:image" />
+        <meta property="og:image" content="/vercel.svg" key="og:image" />
+        <meta property="twitter:image" content="/vercel.svg" key="twitter:image" />
         <meta property="twitter:title" content="madjoylab | Создаём IT команды для технологических проектов" />
         <meta
           property="twitter:description"
