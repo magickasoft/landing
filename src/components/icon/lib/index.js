@@ -1,6 +1,6 @@
 import {notFound} from './404';
-import { arrowDown } from './arrowDown';
-import { arrowUp } from './arrowUp';
+import {arrowDown} from './arrowDown';
+import {arrowUp} from './arrowUp';
 import {building} from './building';
 import {buyFree} from './buyFree';
 import {call} from './call';

@@ -202,7 +202,9 @@ export const Footer = () => (
         <Ul>
           {linkItems.map(({label, ...props}, index) => (
             <Li key={index}>
-              <NavLink {...linkProps} {...props}>{label}</NavLink>
+              <NavLink {...linkProps} {...props}>
+                {label}
+              </NavLink>
             </Li>
           ))}
         </Ul>

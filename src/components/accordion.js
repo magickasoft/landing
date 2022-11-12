@@ -1,8 +1,8 @@
 import SC from '@emotion/styled';
 import React from 'react';
-import { animated,useSpring } from 'react-spring';
+import {animated, useSpring} from 'react-spring';
 
-import { Icon } from './icon';
+import {Icon} from './icon';
 
 const Container = SC.div`
   position: relative;
@@ -52,32 +52,32 @@ const Arrow = SC.div`
 const contentAnimation = {
   false: {
     opacity: 0,
-    transform: "translateY(-20px)",
+    transform: 'translateY(-20px)',
     delay: 30,
-    maxHeight: "0px",
+    maxHeight: '0px',
     display: 'none',
   },
   true: {
-    maxHeight: "1000px",
+    maxHeight: '1000px',
     opacity: 1,
-    transform: "translateY(0)",
+    transform: 'translateY(0)',
     delay: 0,
     display: 'block',
-  }
+  },
 };
 
 const arrowAnimation = {
   false: {
-    transform: "rotatex(0deg)",
+    transform: 'rotatex(0deg)',
     delay: 30,
   },
   true: {
-    transform: "rotatex(-180deg)",
+    transform: 'rotatex(-180deg)',
     delay: 0,
-  }
+  },
 };
 
-export const Accordion = ({ title, children }) => {
+export const Accordion = ({title, children}) => {
   const [open, setOpen] = React.useState(false);
   const content = useSpring(contentAnimation[open]);
   const arrow = useSpring(arrowAnimation[open]);
@@ -86,15 +86,14 @@ export const Accordion = ({ title, children }) => {
       <Header onClick={() => setOpen(!open)}>
         <Title>{title}</Title>
         <animated.div style={arrow}>
-          <Arrow><Icon name="arrowDown" size="24" /></Arrow>
+          <Arrow>
+            <Icon name="arrowDown" size="24" />
+          </Arrow>
         </animated.div>
       </Header>
       <animated.div style={content}>
-        <Content>
-          {children}
-        </Content>
+        <Content>{children}</Content>
       </animated.div>
     </Container>
   );
 };
-
