@@ -62,7 +62,7 @@ export const Benefits = props => (
     <Container>
       <Content>
         <H3>Преимущества работы с нами</H3>
-        {list.map((o,i) => (
+        {list.map((o, i) => (
           <List key={i}>
             <Image width="24" height="24" src="/static/services-check.svg" alt="check" />
             <Label>{o}</Label>
