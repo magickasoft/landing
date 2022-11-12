@@ -84,7 +84,7 @@ const BenefitLabel = SC.div`
   }
 `;
 
-export const ServiceCard = ({label, desc, benefits, steps = [], index = 0}) => (
+export const ServiceCard = ({label, desc, benefits, index = 0}) => (
   <Container index={index}>
     <Title>{label}</Title>
     <Desc>{desc}</Desc>
