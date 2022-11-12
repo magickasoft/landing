@@ -72,14 +72,14 @@ export const Services = props => (
           {
             breakpoint: 2560,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 3,
               slidesToScroll: 1,
             },
           },
           {
             breakpoint: 1440,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 3,
               slidesToScroll: 1,
             },
           },
