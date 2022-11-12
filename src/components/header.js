@@ -84,7 +84,7 @@ export const Header = props => {
             <Link href="tel://+79601195445">+7 960 119 54 45</Link>
             <Link href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</Link>
           </Label>
-          <Link href="https://t.me/evgeny_shmakov">
+          <Link href="https://t.me/madjoylab">
             <SCIcon name="telegram" size={32} />
           </Link>
           <Link href="https://wa.me/79601195445">

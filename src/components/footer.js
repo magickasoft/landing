@@ -178,7 +178,7 @@ const socialLinkItems = [
   },
   {label: 'вконтакте', target: '_blank', href: 'https://vk.com/kotelov_com'},
   {label: 'youtube', target: '_blank', href: 'https://www.youtube.com/channel/UCki5zCJQYBWYfK4wtH94xpQ/featured'},
-  {label: 'telegram', target: '_blank', href: 'https://t.me/evgeny_shmakov'},
+  {label: 'telegram', target: '_blank', href: 'https://t.me/madjoylab'},
 ];
 
 const linkItems = [

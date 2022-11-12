@@ -150,7 +150,7 @@ export const WorkWithUs = props => (
           </Text>
           <Link
             target="_blank"
-            href="https://docs.google.com/forms/d/1nUk-7RryLPhHOMXbTTzsGMcjf9ZJudN1Dw5_vvGolYI/viewform?edit_requested=true"
+            href="https://forms.gle/cTnRi66ieWaJudhS9"
           >
             Присоединиться к команде
           </Link>
