@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import {Events, scrollSpy} from 'react-scroll';
 
-import {Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
+import {Benefits,Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
 
 function Home(props) {
   React.useEffect(() => {
@@ -66,6 +66,7 @@ function Home(props) {
       </Head>
       <Intro />
       <Services />
+      <Benefits />
       <TechStacks />
       <WorkWithUs />
       <Clients />

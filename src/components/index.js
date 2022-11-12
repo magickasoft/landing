@@ -1,3 +1,4 @@
+export {Benefits} from './benefits';
 export {Button} from './button';
 export {Clients} from './clients';
 export {Label, Section, Text} from './common';

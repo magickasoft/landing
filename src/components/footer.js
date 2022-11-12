@@ -184,6 +184,7 @@ const socialLinkItems = [
 const linkItems = [
   {label: 'Главная', href: '/#intro', to: 'intro', id: 'intro'},
   {label: 'Услуги', href: '/#services', to: 'services', id: 'services'},
+  {label: 'Преимущества', href: '/#benefits', to: 'benefits', id: 'benefits'},
   {label: 'Технологии', href: '/#techStacks', to: 'techStacks', id: 'techStacks'},
   {label: 'Работа у нас', href: '/#workWithUs', to: 'workWithUs', id: 'workWithUs'},
   {label: 'Клиенты о нас', href: '/#clients', to: 'clients', id: 'clients'},
