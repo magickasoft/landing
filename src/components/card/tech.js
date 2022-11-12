@@ -1,7 +1,7 @@
 import SC from '@emotion/styled';
 import React from 'react';
 
-import {minDevice} from '../styles';
+import {minDevice} from '../../styles';
 
 const Container = SC.div`
   margin: 20px;

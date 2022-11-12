@@ -3,8 +3,8 @@ import React from 'react';
 import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice} from '../styles';
+import {TechCard} from './card';
 import {CustomSlider} from './customSlider';
-import {TechCard} from './techCard';
 
 const Container = SC.section`
   background-image: linear-gradient(to bottom,#edecec 200px,#fff 200px);

@@ -3,8 +3,8 @@ import React from 'react';
 import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice} from '../styles';
+import {ServiceCard} from './card';
 import {CustomSlider} from './customSlider';
-import {ServiceCard} from './serviceCard';
 
 const Container = SC.section`
   background-color: #edecec;

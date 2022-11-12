@@ -1,8 +1,7 @@
 import SC from '@emotion/styled';
-import Image from 'next/image';
 import React from 'react';
 
-import {minDevice, theme} from '../styles';
+import {minDevice} from '../../styles';
 
 const Container = SC.div`
   margin: 0 auto;

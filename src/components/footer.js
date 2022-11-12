@@ -182,11 +182,11 @@ const socialLinkItems = [
 ];
 
 const linkItems = [
-  {label: 'Главная', to: 'intro', id: 'intro'},
-  {label: 'Услуги', to: 'services', id: 'services'},
-  {label: 'Технологии', to: 'techStacks', id: 'techStacks'},
-  {label: 'Работа у нас', to: 'workWithUs', id: 'workWithUs'},
-  {label: 'Клиенты о нас', to: 'clients', id: 'clients'},
+  {label: 'Главная', href: '/#intro', to: 'intro', id: 'intro'},
+  {label: 'Услуги', href: '/#services', to: 'services', id: 'services'},
+  {label: 'Технологии', href: '/#techStacks', to: 'techStacks', id: 'techStacks'},
+  {label: 'Работа у нас', href: '/#workWithUs', to: 'workWithUs', id: 'workWithUs'},
+  {label: 'Клиенты о нас', href: '/#clients', to: 'clients', id: 'clients'},
 ];
 
 export const Footer = () => (

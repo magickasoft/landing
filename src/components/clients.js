@@ -3,7 +3,7 @@ import React from 'react';
 import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice} from '../styles';
-import {ClientCard} from './clientCard';
+import {ClientCard} from './card';
 import {CustomSlider} from './customSlider';
 
 const Container = SC.section`
