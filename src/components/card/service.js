@@ -88,7 +88,7 @@ export const ServiceCard = ({label, desc, benefits, steps = [], index = 0}) => (
   <Container index={index}>
     <Title>{label}</Title>
     <Desc>{desc}</Desc>
-    <BenefitLabel>Преимущества</BenefitLabel>
+    {Boolean(benefits?.length) && <BenefitLabel>Преимущества</BenefitLabel>}
     {benefits.map((o, i) => (
       <Content key={i}>
         <Image width="24" height="24" src="/static/services-check.svg" alt="check" />
