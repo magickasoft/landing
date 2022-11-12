@@ -168,17 +168,16 @@ const linkProps = {
 };
 
 const socialLinkItems = [
-  {label: 'podcast', target: '_blank', href: 'https://podcast.ru/1591909301'},
   {label: 'linkedin', target: '_blank', href: 'https://www.linkedin.com/company/kotelov'},
-  {label: 'яндекс.дзен', target: '_blank', href: 'https://zen.yandex.ru/kotelov'},
+  {label: 'instagram', target: '_blank', href: 'https://podcast.ru/1591909301'},
+  {label: 'youtube', target: '_blank', href: 'https://www.youtube.com/channel/UCki5zCJQYBWYfK4wtH94xpQ/featured'},
   {
     label: 'tiktok',
     target: '_blank',
     href: 'https://www.tiktok.com/@kotelov_com?lang=ru-RU&amp;is_copy_url=1&amp;is_from_webapp=v1',
   },
   {label: 'вконтакте', target: '_blank', href: 'https://vk.com/kotelov_com'},
-  {label: 'youtube', target: '_blank', href: 'https://www.youtube.com/channel/UCki5zCJQYBWYfK4wtH94xpQ/featured'},
-  {label: 'telegram', target: '_blank', href: 'https://t.me/madjoylab'},
+  {label: 'яндекс.дзен', target: '_blank', href: 'https://zen.yandex.ru/kotelov'},
 ];
 
 const linkItems = [
