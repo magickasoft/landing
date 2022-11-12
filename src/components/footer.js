@@ -170,14 +170,14 @@ const linkProps = {
 const socialLinkItems = [
   {label: 'linkedin', target: '_blank', href: 'https://www.linkedin.com/company/kotelov'},
   {label: 'instagram', target: '_blank', href: 'https://podcast.ru/1591909301'},
-  {label: 'youtube', target: '_blank', href: 'https://www.youtube.com/channel/UCki5zCJQYBWYfK4wtH94xpQ/featured'},
+  {label: 'youtube', target: '_blank', href: 'https://youtube.com/@madjoylab'},
   {
     label: 'tiktok',
     target: '_blank',
     href: 'https://www.tiktok.com/@kotelov_com?lang=ru-RU&amp;is_copy_url=1&amp;is_from_webapp=v1',
   },
-  {label: 'вконтакте', target: '_blank', href: 'https://vk.com/kotelov_com'},
-  {label: 'яндекс.дзен', target: '_blank', href: 'https://zen.yandex.ru/kotelov'},
+  {label: 'вконтакте', target: '_blank', href: 'https://vk.com/madjoylab'},
+  {label: 'яндекс.дзен', target: '_blank', href: 'https://dzen.ru/madjoylab'},
 ];
 
 const linkItems = [
