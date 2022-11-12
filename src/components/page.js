@@ -1,9 +1,10 @@
 import SC from '@emotion/styled';
 import React from 'react';
 
-import {maxDevice} from '../styles';
+import {ibmplexsans400, maxDevice} from '../styles';
 
 const Container = SC.header`
+  font-family: ${ibmplexsans400.style.fontFamily};
   display: flex;
   margin: 120px 140px 60px 140px;
   @media ${maxDevice.tablet} {

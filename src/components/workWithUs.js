@@ -114,7 +114,6 @@ const Link = SC.a`
   padding: 8px 24px;
   font-size: 12px;
   line-height: 16px;
-  // transition: all 0.3s ease;
   background-color: #ffffff;
   border: 2px solid #E13737;
   border-radius: 30px 30px 0px 30px;
