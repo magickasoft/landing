@@ -25,21 +25,21 @@ function Home(props) {
   return (
     <>
       <Head>
-        <title>madjoylab | Создаём IT команды для технологических проектов</title>
+        <title>Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="max-image-preview:large" />
         <meta
           name="description"
-          content="Разрабатываем корпоративный софт для автоматизации бизнеса и производства. Создаем удобные мобильные приложения и web-сервисы."
+          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
         />
         <meta
           name="keywords"
           content="Digital-агентство, Студия madjoylab, Дизайн сайта, Дизайн приложений, Разработка приложений, Разработка сайтов, SMM-услуги, Школа дизайна, Школа разработки, madjoylab design, madjoylab dev"
         />
-        <meta property="og:title" content="madjoylab | Создаём IT команды для технологических проектов" />
+        <meta property="og:title" content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование" />
         <meta
           property="og:description"
-          content="Разрабатываем корпоративный софт для автоматизации бизнеса и производства. Создаем удобные мобильные приложения и web-сервисы."
+          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
         />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={new Date().toISOString()} />
@@ -49,10 +49,10 @@ function Home(props) {
         <meta property="og:site_name" content="madjoylab" />
         <meta property="og:image" content="/cover.png" key="og:image" />
         <meta property="twitter:image" content="/cover.png" key="twitter:image" />
-        <meta property="twitter:title" content="madjoylab | Создаём IT команды для технологических проектов" />
+        <meta property="twitter:title" content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование" />
         <meta
           property="twitter:description"
-          content="Разрабатываем корпоративный софт для автоматизации бизнеса и производства. Создаем удобные мобильные приложения и web-сервисы."
+          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
         />
         <meta name="twitter:card" content="summary" />
         <meta property="twitter:url" content="http://madjoylab.ru/" />
