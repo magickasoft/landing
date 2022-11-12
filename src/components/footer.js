@@ -1,8 +1,8 @@
 import SC from '@emotion/styled';
 import React from 'react';
+import {Link} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice, minDevice} from '../styles';
-// import Link from 'next/link';
 
 const Container = SC.footer`
   font-family: ${ibmplexsans400.style.fontFamily};
@@ -33,7 +33,7 @@ const Copyright = SC.div`
   }
 `;
 
-const Link = SC.a`
+const A = SC.a`
   transition: .25s ease;
   transition-property: background-position,border,color,left,margin,padding,right,opacity;
   color: #1f2326;
@@ -142,7 +142,8 @@ const Li = SC.li`
   text-align: -webkit-match-parent;
 `;
 
-const NavLink = SC.a`
+const NavLink = SC(Link)`
+  cursor: pointer !important;
   color: #22262A;
   font-size: 14px;
   line-height: 20px;
@@ -156,6 +157,15 @@ const NavLink = SC.a`
     background-position: 0;
   }
 `;
+
+const linkProps = {
+  activeClass: 'active',
+  hashSpy: true,
+  spy: true,
+  smooth: true,
+  duration: 500,
+  offset: 50,
+};
 
 const socialLinkItems = [
   {label: 'podcast', target: '_blank', href: 'https://podcast.ru/1591909301'},
@@ -172,13 +182,11 @@ const socialLinkItems = [
 ];
 
 const linkItems = [
-  {label: 'Кейсы', href: 'https://kotelov.com/cases/'},
-  {label: 'Аутстаффинг', href: 'https://kotelov.com/outstuff/'},
-  {label: 'Тестирование ПО', href: 'https://kotelov.com/testirovanie_na_zakaz/'},
-  {label: 'Блог', href: 'https://kotelov.com/blog/'},
-  {label: 'HR', href: 'https://kotelov.com/hr/'},
-  {label: 'О нас', href: 'https://kotelov.com/team/'},
-  {label: 'Контакты', href: 'https://kotelov.com/contacts/'},
+  {label: 'Главная', to: 'intro', id: 'intro'},
+  {label: 'Услуги', to: 'services', id: 'services'},
+  {label: 'Технологии', to: 'techStacks', id: 'techStacks'},
+  {label: 'Работа у нас', to: 'workWithUs', id: 'workWithUs'},
+  {label: 'Клиенты о нас', to: 'clients', id: 'clients'},
 ];
 
 export const Footer = () => (
@@ -186,15 +194,15 @@ export const Footer = () => (
     <Content>
       <Contacts>
         <Email>
-          <Link href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</Link>
+          <A href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</A>
         </Email>
-        <Link href="tel://+79601195445">+7 960 119 54 45</Link>
+        <A href="tel://+79601195445">+7 960 119 54 45</A>
       </Contacts>
       <Nav>
         <Ul>
           {linkItems.map(({label, ...props}, index) => (
             <Li key={index}>
-              <NavLink {...props}>{label}</NavLink>
+              <NavLink {...linkProps} {...props}>{label}</NavLink>
             </Li>
           ))}
         </Ul>
