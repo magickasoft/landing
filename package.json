@@ -1,5 +1,5 @@
 {
-  "name": "realty",
+  "name": "madjoylab",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*.js\""
+    "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*.js\"",
+    "docker-build": "docker build -t madjoylab-nextjs .",
+    "docker-run": "docker run -p 3000:3000 madjoylab-nextjs",
+    "docker-images": "docker images"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
