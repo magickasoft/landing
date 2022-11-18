@@ -59,6 +59,6 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}) => {
       </ThemeProvider>
     </CacheProvider>
   );
-}
+};
 
 export default withYM(YA_METRIKA_ID, Router)(App);

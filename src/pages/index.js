@@ -72,6 +72,6 @@ const Home = props => {
       <Clients />
     </>
   );
-}
+};
 
 export default Home;
