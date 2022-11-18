@@ -15,7 +15,7 @@ import theme from '../styles/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 
-function App({Component, emotionCache = clientSideEmotionCache, pageProps}) {
+const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}) => {
   const router = useRouter();
   React.useEffect(() => {
     const handleRouteChange = url => pageview(url);

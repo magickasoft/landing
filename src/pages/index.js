@@ -4,7 +4,7 @@ import {Events, scrollSpy} from 'react-scroll';
 
 import {Benefits, Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
 
-function Home(props) {
+const Home = props => {
   React.useEffect(() => {
     Events.scrollEvent.register('begin', function (to, element) {
       console.log('begin', to);
