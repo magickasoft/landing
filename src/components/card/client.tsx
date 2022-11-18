@@ -110,7 +110,14 @@ const Position = SC.p`
   }
 `;
 
-export const ClientCard = ({src, desc, position, executive}) => (
+type ClientCardProps = {
+  src?: any;
+  desc?: any;
+  position?: any;
+  executive?: any;
+};
+
+export const ClientCard = ({src, desc, position, executive}: ClientCardProps) => (
   <Container>
     <Desc>
       <P>{desc}</P>

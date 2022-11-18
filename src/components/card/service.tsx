@@ -4,7 +4,11 @@ import React from 'react';
 
 import {maxDevice, minDevice} from '../../styles';
 
-const Container = SC.div`
+type ContainerProps = {
+  index: number;
+};
+
+const Container = SC.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,7 +88,14 @@ const BenefitLabel = SC.div`
   }
 `;
 
-export const ServiceCard = ({label, desc, benefits, index = 0}) => (
+type ServiceCardProps = {
+  label?: any;
+  desc?: any;
+  benefits?: any;
+  index?: number;
+};
+
+export const ServiceCard = ({label, desc, benefits, index = 0}: ServiceCardProps) => (
   <Container index={index}>
     <Title>{label}</Title>
     <Desc>{desc}</Desc>

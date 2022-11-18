@@ -84,7 +84,11 @@ const Li = SC.li`
   }
 `;
 
-export const TechCard = ({items = []}) => (
+type TechCardProps = {
+  items: any;
+};
+
+export const TechCard = ({items = []}: TechCardProps) => (
   <>
     {items.map((o, index) => (
       <Container key={index}>
