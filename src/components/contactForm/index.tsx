@@ -46,6 +46,7 @@ export const ContactForm = props => {
           <form onSubmit={handleSubmit}>
             <Box mb={3} mt={3}>
               <Box>
+                {/*// @ts-ignore*/}
                 <InputPhone
                   label="Телефон"
                   name="phone"
