@@ -6,6 +6,7 @@
     "postinstall": "./node_modules/.bin/husky install",
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "cross-env SITE_URL=https://madjoylab.ru next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*{.js,.ts,.tsx}\"",
