@@ -5,14 +5,14 @@
   "scripts": {
     "postinstall": "./node_modules/.bin/husky install",
     "dev": "./node_modules/.bin/next dev",
-    "build": "cross-env SITE_URL=https://madjoylab.ru ./node_modules/.bin/next-sitemap && ./node_modules/.bin/next build",
+    "build": "./node_modules/.bin/cross-env SITE_URL=https://madjoylab.ru ./node_modules/.bin/next-sitemap && ./node_modules/.bin/next build",
     "start": "./node_modules/.bin/next start",
     "lint": "./node_modules/.bin/next lint",
     "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*{.js,.ts,.tsx}\"",
     "docker-build": "docker build -t madjoylab-nextjs .",
     "docker-run": "docker run -p 3000:3000 madjoylab-nextjs",
     "docker-images": "docker images",
-    "analyze": "cross-env ANALYZE=true yarn build && serve .next/analyze"
+    "analyze": "./node_modules/.bin/cross-env ANALYZE=true yarn build && serve .next/analyze"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
