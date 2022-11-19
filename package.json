@@ -6,7 +6,7 @@
     "postinstall": "./node_modules/.bin/husky install",
     "dev": "./node_modules/.bin/next dev",
     "build": "./node_modules/.bin/next build",
-    "postbuild": "./node_modules/.bin/cross-env SITE_URL=https://madjoylab.ru ./node_modules/.bin/next-sitemap",
+    "postbuild": "./node_modules/.bin/next-sitemap",
     "start": "./node_modules/.bin/next start",
     "lint": "./node_modules/.bin/next lint",
     "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*{.js,.ts,.tsx}\"",
