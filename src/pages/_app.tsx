@@ -1,6 +1,7 @@
 import {CacheProvider} from '@emotion/react';
 import {CssBaseline} from '@mui/material';
 import {ThemeProvider} from '@mui/material/styles';
+import {Analytics} from '@vercel/analytics/react';
 import Head from 'next/head';
 import Router, {useRouter} from 'next/router';
 import Script from 'next/script';
@@ -56,6 +57,7 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}) => {
         <Header />
         <Component {...pageProps} />
         <Footer />
+        <Analytics />
       </ThemeProvider>
     </CacheProvider>
   );
