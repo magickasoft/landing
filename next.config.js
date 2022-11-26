@@ -27,6 +27,10 @@ const defaultConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     domains: ['cdn.pixabay.com', 'media.istockphoto.com', 'novostroiki-54.ru'],
   },
+  i18n: {
+    locales: ['ru', 'en'],
+    defaultLocale: 'ru',
+  },
 };
 
 module.exports = (phase) => {

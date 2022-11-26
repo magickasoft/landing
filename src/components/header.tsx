@@ -4,6 +4,7 @@ import React from 'react';
 import {ibmplexsans400, maxDevice} from '../styles';
 import {Text} from './common';
 import {Icon} from './icon';
+import {LocaleSwitcher} from './localeSwitcher';
 import {ScrollIndicator} from './scrollIndicator';
 
 type ContainerProps = {
@@ -84,6 +85,7 @@ export const Header = props => {
           <strong>madjoylab</strong>
         </Text>
         <Row>
+          <LocaleSwitcher />
           <Label>
             <Link href="tel://+79601195445">+7 960 119 54 45</Link>
             <Link href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</Link>
