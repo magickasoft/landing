@@ -68,7 +68,6 @@ export const Services = props => (
       </Content>
       <CustomSlider
         centerMode={false}
-        withControls={false}
         responsive={[
           {
             breakpoint: 2560,
