@@ -39,7 +39,7 @@ export const CustomSlider = ({withControls = true, initialSlide = 0, children, .
     className: 'center',
     centerMode: true,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide,
