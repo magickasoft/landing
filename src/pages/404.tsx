@@ -1,9 +1,9 @@
 import SC from '@emotion/styled';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import type {GetStaticProps, InferGetStaticPropsType} from 'next';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Trans, useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import {useRouter} from 'next/router';
+import {Trans, useTranslation} from 'next-i18next';
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 
 import {Page} from '../components';
 import {Icon} from '../components/icon';
@@ -59,11 +59,11 @@ const Img = SC.div`
 
 type Props = {
   // Add custom props here
-}
+};
 
-const NotFoundPage = ( _props: InferGetStaticPropsType<typeof getStaticProps>) => {
+const NotFoundPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
-  const { t } = useTranslation('common');
+  const {t} = useTranslation('common');
 
   // const onToggleLanguageClick = (newLocale: string) => {
   //   const { pathname, asPath, query } = router
@@ -82,7 +82,7 @@ const NotFoundPage = ( _props: InferGetStaticPropsType<typeof getStaticProps>) =
             Начните с главной страницы
           </Link>
           <Link href="/" locale={changeTo}>
-            <button>{t('change-locale', { changeTo })}</button>
+            <button>{t('change-locale', {changeTo})}</button>
           </Link>
           {/* alternative language change without using Link component
           <button onClick={() => onToggleLanguageClick(changeTo)}>
@@ -99,11 +99,9 @@ const NotFoundPage = ( _props: InferGetStaticPropsType<typeof getStaticProps>) =
       </Img>
     </Page>
   );
-}
+};
 
-export const getStaticProps: GetStaticProps<Props> = async ({
-  locale,
-}) => ({
+export const getStaticProps: GetStaticProps<Props> = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
   },

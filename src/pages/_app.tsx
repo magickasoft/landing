@@ -5,7 +5,7 @@ import {Analytics} from '@vercel/analytics/react';
 import Head from 'next/head';
 import Router, {useRouter} from 'next/router';
 import Script from 'next/script';
-import { appWithTranslation } from 'next-i18next';
+import {appWithTranslation} from 'next-i18next';
 import React from 'react';
 
 import nextI18NextConfig from '../../next-i18next.config.js';
@@ -66,4 +66,4 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}) => {
 };
 const AppYM = withYM(YA_METRIKA_ID, Router)(App);
 
-export default appWithTranslation(AppYM , nextI18NextConfig);
+export default appWithTranslation(AppYM, nextI18NextConfig);
