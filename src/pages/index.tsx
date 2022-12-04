@@ -4,7 +4,7 @@ import {Events, scrollSpy} from 'react-scroll';
 
 import {Benefits, Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
 
-const Home = props => {
+const HomePage = props => {
   React.useEffect(() => {
     Events.scrollEvent.register('begin', function (to, element) {
       console.log('begin', to);
@@ -74,4 +74,4 @@ const Home = props => {
   );
 };
 
-export default Home;
+export default HomePage;

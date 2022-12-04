@@ -2,7 +2,7 @@ import SC from '@emotion/styled';
 import type {GetStaticProps, InferGetStaticPropsType} from 'next';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
-import {Trans, useTranslation} from 'next-i18next';
+import {useTranslation} from 'next-i18next';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 
 import {Page} from '../components';
@@ -64,34 +64,15 @@ type Props = {
 const NotFoundPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
   const {t} = useTranslation('common');
-
-  // const onToggleLanguageClick = (newLocale: string) => {
-  //   const { pathname, asPath, query } = router
-  //   router.push({ pathname, query }, asPath, { locale: newLocale })
-  // };
-
-  const changeTo = router.locale === 'ru' ? 'en' : 'ru';
-
   return (
     <Page>
       <div>
-        <Title>{`Этой страницы \nне существует`}</Title>
+        <Title>{t('NotFoundPage.title')}</Title>
         <Text>
-          Вы перешли по неверной ссылке, либо эта страница была удалена.&nbsp;
+        {t('NotFoundPage.text')}
           <Link rel="canonical" href="/" passHref>
-            Начните с главной страницы
+            {t('NotFoundPage.link')}
           </Link>
-          <Link href="/" locale={changeTo}>
-            <button>{t('change-locale', {changeTo})}</button>
-          </Link>
-          {/* alternative language change without using Link component
-          <button onClick={() => onToggleLanguageClick(changeTo)}>
-            {t('change-locale', { changeTo })}
-          </button>
-          */}
-          {/* <Link href="/second-page">
-            <button type="button">{t('to-second-page')}</button>
-          </Link> */}
         </Text>
       </div>
       <Img>
