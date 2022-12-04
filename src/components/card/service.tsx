@@ -111,4 +111,4 @@ export const ServiceCard = ({label, desc, benefits, index = 0}: ServiceCardProps
       ))}
     </Container>
   );
-}
+};

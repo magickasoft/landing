@@ -100,10 +100,7 @@ export const Services = props => {
         <Content>
           <H3>{t('HomePage.Services.title')}</H3>
         </Content>
-        <CustomSlider
-          centerMode={false}
-          responsive={defaultResponsive}
-        >
+        <CustomSlider centerMode={false} responsive={defaultResponsive}>
           {slideData.map((o, i) => (
             <ServiceCard index={i} key={i} {...o} />
           ))}
@@ -111,4 +108,4 @@ export const Services = props => {
       </Container>
     </Element>
   );
-}
+};

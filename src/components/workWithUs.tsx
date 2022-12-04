@@ -146,9 +146,7 @@ export const WorkWithUs = props => {
             <SvgWrap>
               <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
             </SvgWrap>
-            <Text>
-              {t('HomePage.WorkWithUs.text')}
-            </Text>
+            <Text>{t('HomePage.WorkWithUs.text')}</Text>
             <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
               {t('HomePage.WorkWithUs.link')}
             </Link>
@@ -157,4 +155,4 @@ export const WorkWithUs = props => {
       </Container>
     </Element>
   );
-}
+};

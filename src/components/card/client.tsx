@@ -136,4 +136,4 @@ export const ClientCard = ({src, desc, position, executive}: ClientCardProps) =>
       </User>
     </Container>
   );
-}
+};

@@ -42,4 +42,4 @@ export const Intro = props => {
       </section>
     </Element>
   );
-}
+};

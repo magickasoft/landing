@@ -92,4 +92,4 @@ export const Clients = props => {
       </Container>
     </Element>
   );
-}
+};

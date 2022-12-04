@@ -238,4 +238,4 @@ export const Footer = () => {
       </Content>
     </Container>
   );
-}
+};

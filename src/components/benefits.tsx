@@ -75,4 +75,4 @@ export const Benefits = props => {
       </Container>
     </Element>
   );
-}
+};
