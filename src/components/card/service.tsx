@@ -1,5 +1,6 @@
 import SC from '@emotion/styled';
 import Image from 'next/image';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 
 import {maxDevice, minDevice} from '../../styles';
@@ -95,16 +96,19 @@ type ServiceCardProps = {
   index?: number;
 };
 
-export const ServiceCard = ({label, desc, benefits, index = 0}: ServiceCardProps) => (
-  <Container index={index}>
-    <Title>{label}</Title>
-    <Desc>{desc}</Desc>
-    {Boolean(benefits?.length) && <BenefitLabel>Преимущества</BenefitLabel>}
-    {benefits.map((o, i) => (
-      <Content key={i}>
-        <Image width="24" height="24" src="/static/services-check.svg" alt="check" />
-        <Label>{o}</Label>
-      </Content>
-    ))}
-  </Container>
-);
+export const ServiceCard = ({label, desc, benefits, index = 0}: ServiceCardProps) => {
+  const {t} = useTranslation('common');
+  return (
+    <Container index={index}>
+      <Title>{t(label)}</Title>
+      <Desc>{t(desc)}</Desc>
+      {Boolean(benefits?.length) && <BenefitLabel>{t('HomePage.Services.benefit')}</BenefitLabel>}
+      {benefits.map((o, i) => (
+        <Content key={i}>
+          <Image width="24" height="24" src="/static/services-check.svg" alt="check" />
+          <Label>{t(o)}</Label>
+        </Content>
+      ))}
+    </Container>
+  );
+}

@@ -1,4 +1,5 @@
 import SC from '@emotion/styled';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 import {Link} from 'react-scroll';
 
@@ -168,57 +169,73 @@ const linkProps = {
 };
 
 const socialLinkItems = [
-  {label: 'linkedin', target: '_blank', href: 'https://www.linkedin.com/company/kotelov'},
-  {label: 'instagram', target: '_blank', href: 'https://podcast.ru/1591909301'},
-  {label: 'youtube', target: '_blank', href: 'https://youtube.com/@madjoylab'},
+  {label: 'Footer.socialLink1', target: '_blank', href: 'https://www.linkedin.com/company/kotelov'},
+  {label: 'Footer.socialLink2', target: '_blank', href: 'https://podcast.ru/1591909301'},
+  {label: 'Footer.socialLink3', target: '_blank', href: 'https://youtube.com/@madjoylab'},
   {
-    label: 'tiktok',
+    label: 'Footer.socialLink4',
     target: '_blank',
     href: 'https://www.tiktok.com/@kotelov_com?lang=ru-RU&amp;is_copy_url=1&amp;is_from_webapp=v1',
   },
-  {label: 'вконтакте', target: '_blank', href: 'https://vk.com/madjoylab'},
-  {label: 'яндекс.дзен', target: '_blank', href: 'https://dzen.ru/madjoylab'},
+  {label: 'Footer.socialLink5', target: '_blank', href: 'https://vk.com/madjoylab'},
+  {label: 'Footer.socialLink6', target: '_blank', href: 'https://dzen.ru/madjoylab'},
 ];
 
 const linkItems = [
-  {label: 'Главная', href: '/#intro', to: 'intro', id: 'intro'},
-  {label: 'Услуги', href: '/#services', to: 'services', id: 'services'},
-  {label: 'Преимущества', href: '/#benefits', to: 'benefits', id: 'benefits'},
-  {label: 'Технологии', href: '/#techStacks', to: 'techStacks', id: 'techStacks'},
-  {label: 'Работа у нас', href: '/#workWithUs', to: 'workWithUs', id: 'workWithUs'},
-  {label: 'Клиенты о нас', href: '/#clients', to: 'clients', id: 'clients'},
+  {label: 'Footer.link1', href: '/#intro', to: 'intro', id: 'intro'},
+  {label: 'Footer.link2', href: '/#services', to: 'services', id: 'services'},
+  {label: 'Footer.link3', href: '/#benefits', to: 'benefits', id: 'benefits'},
+  {label: 'Footer.link4', href: '/#techStacks', to: 'techStacks', id: 'techStacks'},
+  {label: 'Footer.link5', href: '/#workWithUs', to: 'workWithUs', id: 'workWithUs'},
+  {label: 'Footer.link6', href: '/#clients', to: 'clients', id: 'clients'},
 ];
 
-export const Footer = () => (
-  <Container>
-    <Content>
-      <Contacts>
-        <Email>
-          <A href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</A>
-        </Email>
-        <A href="tel://+79601195445">+7 960 119 54 45</A>
-      </Contacts>
-      <Nav>
-        <Ul>
-          {linkItems.map(({label, ...props}, index) => (
-            <Li key={index}>
-              <NavLink {...linkProps} {...props}>
-                {label}
-              </NavLink>
-            </Li>
-          ))}
-        </Ul>
-      </Nav>
-      <Note>
-        <Copyright>© madjoylab, {new Date().getFullYear()}</Copyright>
-        <Social>
-          {socialLinkItems.map(({label, ...props}, index) => (
-            <SocialLink key={index} {...props}>
-              {label}
-            </SocialLink>
-          ))}
-        </Social>
-      </Note>
-    </Content>
-  </Container>
-);
+type LinkProps = {
+  label?: any;
+  href?: string;
+  id?: string;
+  to?: string;
+};
+
+type SocialLinkProps = {
+  label?: any;
+  href?: string;
+  target?: string;
+};
+
+export const Footer = () => {
+  const {t} = useTranslation('common');
+  return (
+    <Container>
+      <Content>
+        <Contacts>
+          <Email>
+            <A href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</A>
+          </Email>
+          <A href="tel://+79601195445">+7 960 119 54 45</A>
+        </Contacts>
+        <Nav>
+          <Ul>
+            {linkItems.map(({label, ...props}: LinkProps, index) => (
+              <Li key={index}>
+                <NavLink {...linkProps} {...props}>
+                  {t(label)}
+                </NavLink>
+              </Li>
+            ))}
+          </Ul>
+        </Nav>
+        <Note>
+          <Copyright>© madjoylab, {new Date().getFullYear()}</Copyright>
+          <Social>
+            {socialLinkItems.map(({label, ...props}: SocialLinkProps, index) => (
+              <SocialLink key={index} {...props}>
+                {t(label)}
+              </SocialLink>
+            ))}
+          </Social>
+        </Note>
+      </Content>
+    </Container>
+  );
+}

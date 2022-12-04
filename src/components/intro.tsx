@@ -1,4 +1,5 @@
 import SC from '@emotion/styled';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 import {Element} from 'react-scroll';
 
@@ -29,13 +30,16 @@ const Brand = SC.h3`
   }
 `;
 
-export const Intro = props => (
-  <Element name="intro">
-    <section>
-      <Container>
-        <Brand>Создаём IT команды для технологических проектов</Brand>
-      </Container>
-      <CompaniesList />
-    </section>
-  </Element>
-);
+export const Intro = props => {
+  const {t} = useTranslation('common');
+  return (
+    <Element name="intro">
+      <section>
+        <Container>
+          <Brand>{t('HomePage.Intro.title')}</Brand>
+        </Container>
+        <CompaniesList />
+      </section>
+    </Element>
+  );
+}

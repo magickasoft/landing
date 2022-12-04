@@ -1,4 +1,5 @@
 import SC from '@emotion/styled';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 import {Element} from 'react-scroll';
 
@@ -38,54 +39,57 @@ const H3 = SC.h3`
 
 const slideData = [
   {
-    desc: 'Крутая команда профессионалов, быстро адаптирующаяся под периодически изменяемые требования заказчика, качественно и в срок выполняющая поставленные задачи',
+    desc: 'HomePage.Clients.clientDesc1',
     src: '/static/clients/Kovtun_Anastasia.jpeg',
-    executive: 'Ковтун Анастасия',
-    position: 'Руководитель проектов S7 Airlines',
+    executive: 'HomePage.Clients.clientExecutive1',
+    position: 'HomePage.Clients.clientPosition1',
   },
   {
-    desc: 'madjoylab оперативно предоставил мобильных и бэкенд разработчиков, что позволило усилить команду и точечно ускорить развитие проектов',
+    desc: 'HomePage.Clients.clientDesc2',
     src: '/static/clients/Oleg_Borisov.jpeg',
-    executive: 'Олег Борисов',
-    position: 'Руководитель проектов группы компаний "ПИК"',
+    executive: 'HomePage.Clients.clientExecutive2',
+    position: 'HomePage.Clients.clientPosition2',
   },
   {
-    desc: 'За время работы над проектом разработчики под руководством madjoylab показали себя как команда профессионалов, успешно решивших все поставленные перед ними задачи и достигнувших цели проекта',
+    desc: 'HomePage.Clients.clientDesc3',
     src: '/static/clients/Dmitry_Butyanov.jpeg',
-    executive: 'Дмитрий Бутянов',
-    position: 'PBE Майкрософт РУС',
+    executive: 'HomePage.Clients.clientExecutive3',
+    position: 'HomePage.Clients.clientPosition3',
   },
   {
-    desc: 'Ребята из madjoylab разработали масштабную систему, которая требовала крайне высокую техническую экспертность и позволила поднять сервис на борту самолетов на новый уровень',
+    desc: 'HomePage.Clients.clientDesc4',
     src: '/static/clients/Alexander_Lukash.jpeg',
-    executive: 'Александр Лукаш',
-    position: 'Product owner S7 Airlines',
+    executive: 'HomePage.Clients.clientExecutive4',
+    position: 'HomePage.Clients.clientPosition4',
   },
   {
-    desc: 'Предложенные специалистами команды проектные решения по реализации требуемого функционала, позволили на выходе получить высококачественный продукт с удобным пользовательским интерфейсом. Все поставленные задачи выполнены в срок и в полном объеме',
+    desc: 'HomePage.Clients.clientDesc5',
     src: '/static/clients/Belimov_Alexander.jpeg',
-    executive: 'Белимов Александр',
-    position: 'Директор проектов RostelecomLabs',
+    executive: 'HomePage.Clients.clientExecutive5',
+    position: 'HomePage.Clients.clientPosition5',
   },
   {
-    desc: 'За время сотрудничества по ряду проектов компания madjoylab зарекомендовала себя, как надежный партнер, всегда стремящийся максимально эффективно решить поставленные задачи, подобрать необходимые ресурсы. ',
+    desc: 'HomePage.Clients.clientDesc6',
     src: '/static/clients/Kirill_Makarkin.jpeg',
-    executive: 'Кирилл Макаркин',
-    position: 'Руководитель проектов цифровизации Брусники',
+    executive: 'HomePage.Clients.clientExecutive6',
+    position: 'HomePage.Clients.clientPosition6',
   },
 ];
 
-export const Clients = props => (
-  <Element name="clients">
-    <Container>
-      <Content>
-        <H3>Клиенты о нас</H3>
-      </Content>
-      <CustomSlider>
-        {slideData.map((o, i) => (
-          <ClientCard key={i} {...o} />
-        ))}
-      </CustomSlider>
-    </Container>
-  </Element>
-);
+export const Clients = props => {
+  const {t} = useTranslation('common');
+  return (
+    <Element name="clients">
+      <Container>
+        <Content>
+          <H3>{t('HomePage.Clients.title')}</H3>
+        </Content>
+        <CustomSlider>
+          {slideData.map((o, i) => (
+            <ClientCard key={i} {...o} />
+          ))}
+        </CustomSlider>
+      </Container>
+    </Element>
+  );
+}

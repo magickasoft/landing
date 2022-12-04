@@ -1,5 +1,6 @@
 import SC from '@emotion/styled';
 import Image from 'next/image';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 import {Element} from 'react-scroll';
 
@@ -49,26 +50,29 @@ const Label = SC.div`
 `;
 
 const list = [
-  'Индивидуальный подход и максимальное погружение в проект',
-  'Поддержка и консультирование 24/7',
-  'Высокая скорость закрытия позиций',
-  'Гарантия замены в период испытательного срока',
-  'Помощь в адаптации кандидатов на новом рабочем месте',
-  'Снижение затрат на IT-персонал',
+  'HomePage.Benefits.benefit1',
+  'HomePage.Benefits.benefit2',
+  'HomePage.Benefits.benefit3',
+  'HomePage.Benefits.benefit4',
+  'HomePage.Benefits.benefit5',
+  'HomePage.Benefits.benefit6',
 ];
 
-export const Benefits = props => (
-  <Element name="benefits">
-    <Container>
-      <Content>
-        <H3>Преимущества работы с нами</H3>
-        {list.map((o, i) => (
-          <List key={i}>
-            <Image width="24" height="24" src="/static/services-check.svg" alt="check" />
-            <Label>{o}</Label>
-          </List>
-        ))}
-      </Content>
-    </Container>
-  </Element>
-);
+export const Benefits = props => {
+  const {t} = useTranslation('common');
+  return (
+    <Element name="benefits">
+      <Container>
+        <Content>
+          <H3>{t('HomePage.Benefits.title')}</H3>
+          {list.map((o: any, i) => (
+            <List key={i}>
+              <Image width="24" height="24" src="/static/services-check.svg" alt="check" />
+              <Label>{t(o)}</Label>
+            </List>
+          ))}
+        </Content>
+      </Container>
+    </Element>
+  );
+}

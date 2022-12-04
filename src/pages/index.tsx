@@ -1,10 +1,16 @@
+import type {GetStaticProps, InferGetStaticPropsType} from 'next';
 import Head from 'next/head';
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import React from 'react';
 import {Events, scrollSpy} from 'react-scroll';
 
 import {Benefits, Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
 
-const HomePage = props => {
+type Props = {
+  // Add custom props here
+};
+
+const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   React.useEffect(() => {
     Events.scrollEvent.register('begin', function (to, element) {
       console.log('begin', to);
@@ -73,5 +79,11 @@ const HomePage = props => {
     </>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({locale}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
+  },
+});
 
 export default HomePage;

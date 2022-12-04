@@ -1,7 +1,6 @@
 import SC from '@emotion/styled';
 import type {GetStaticProps, InferGetStaticPropsType} from 'next';
 import Link from 'next/link';
-import {useRouter} from 'next/router';
 import {useTranslation} from 'next-i18next';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 
@@ -62,14 +61,13 @@ type Props = {
 };
 
 const NotFoundPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const router = useRouter();
   const {t} = useTranslation('common');
   return (
     <Page>
       <div>
         <Title>{t('NotFoundPage.title')}</Title>
         <Text>
-        {t('NotFoundPage.text')}
+          {t('NotFoundPage.text')}
           <Link rel="canonical" href="/" passHref>
             {t('NotFoundPage.link')}
           </Link>

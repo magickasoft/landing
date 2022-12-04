@@ -1,4 +1,5 @@
 import SC from '@emotion/styled';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 import {Element} from 'react-scroll';
 
@@ -39,70 +40,75 @@ const H3 = SC.h3`
 
 const slideData = [
   {
-    label: 'Подбор IT персонала',
-    desc: 'Закрытие единичных позиций, а также подбор команды для стартапа или отдела',
+    label: 'HomePage.Services.serviceLabel1',
+    desc: 'HomePage.Services.serviceDesc1',
     benefits: [],
   },
   {
-    label: 'Аутсорсинг разработчиков и проектных команд',
-    desc: 'Интеграция в команду клиента',
+    label: 'HomePage.Services.serviceLabel2',
+    desc: 'HomePage.Services.serviceDesc2',
     benefits: [],
   },
   {
-    label: 'IT Executive Search',
-    desc: 'Подбор руководителей высшего звена и редких IT-специалистов',
+    label: 'HomePage.Services.serviceLabel3',
+    desc: 'HomePage.Services.serviceDesc3',
     benefits: [],
   },
   {
-    label: 'Карьерное консультирование',
-    desc: 'Помогаем в достижении карьерных целей начинающим специалистам, опытным экспертам и тем, кто хочет сменить направление',
+    label: 'HomePage.Services.serviceLabel4',
+    desc: 'HomePage.Services.serviceDesc4',
     benefits: [],
   },
 ];
 
-export const Services = props => (
-  <Element name="services">
-    <Container>
-      <Content>
-        <H3>Услуги</H3>
-      </Content>
-      <CustomSlider
-        centerMode={false}
-        responsive={[
-          {
-            breakpoint: 2560,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 1440,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ]}
-      >
-        {slideData.map((o, i) => (
-          <ServiceCard index={i} key={i} {...o} />
-        ))}
-      </CustomSlider>
-    </Container>
-  </Element>
-);
+const defaultResponsive = [
+  {
+    breakpoint: 2560,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 1440,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+  },
+];
+
+export const Services = props => {
+  const {t} = useTranslation('common');
+  return (
+    <Element name="services">
+      <Container>
+        <Content>
+          <H3>{t('HomePage.Services.title')}</H3>
+        </Content>
+        <CustomSlider
+          centerMode={false}
+          responsive={defaultResponsive}
+        >
+          {slideData.map((o, i) => (
+            <ServiceCard index={i} key={i} {...o} />
+          ))}
+        </CustomSlider>
+      </Container>
+    </Element>
+  );
+}

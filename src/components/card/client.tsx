@@ -1,4 +1,5 @@
 import SC from '@emotion/styled';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 
 import {minDevice} from '../../styles';
@@ -117,19 +118,22 @@ type ClientCardProps = {
   executive?: any;
 };
 
-export const ClientCard = ({src, desc, position, executive}: ClientCardProps) => (
-  <Container>
-    <Desc>
-      <P>{desc}</P>
-    </Desc>
-    <User>
-      {src && (
-        <Photo>
-          <Img src={src} loading="eager" alt={executive} />
-        </Photo>
-      )}
-      {executive && <H4>{executive}</H4>}
-      {position && <Position>{position}</Position>}
-    </User>
-  </Container>
-);
+export const ClientCard = ({src, desc, position, executive}: ClientCardProps) => {
+  const {t} = useTranslation('common');
+  return (
+    <Container>
+      <Desc>
+        <P>{t(desc)}</P>
+      </Desc>
+      <User>
+        {src && (
+          <Photo>
+            <Img src={src} loading="eager" alt={executive} />
+          </Photo>
+        )}
+        {executive && <H4>{t(executive)}</H4>}
+        {position && <Position>{t(position)}</Position>}
+      </User>
+    </Container>
+  );
+}

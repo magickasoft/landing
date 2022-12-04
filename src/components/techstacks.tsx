@@ -1,4 +1,5 @@
 import SC from '@emotion/styled';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 import {Element} from 'react-scroll';
 
@@ -280,48 +281,51 @@ const slideData = [
   },
 ];
 
-export const TechStacks = props => (
-  <Element name="techStacks">
-    <Container>
-      <Content>
-        <H3>Технологии</H3>
-      </Content>
-      <CustomSlider
-        responsive={[
-          {
-            breakpoint: 2560,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 2,
-            },
-          },
-          {
-            breakpoint: 1440,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ]}
-      >
-        {slideData.map((o, i) => (
-          <TechCard key={i} {...o} />
-        ))}
-      </CustomSlider>
-    </Container>
-  </Element>
-);
+const defaultResponsive = [
+  {
+    breakpoint: 2560,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 2,
+    },
+  },
+  {
+    breakpoint: 1440,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+  },
+];
+
+export const TechStacks = props => {
+  const {t} = useTranslation('common');
+  return (
+    <Element name="techStacks">
+      <Container>
+        <Content>
+          <H3>{t('HomePage.TechStacks.title')}</H3>
+        </Content>
+        <CustomSlider responsive={defaultResponsive}>
+          {slideData.map((o, i) => (
+            <TechCard key={i} {...o} />
+          ))}
+        </CustomSlider>
+      </Container>
+    </Element>
+  );
+}

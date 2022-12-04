@@ -1,4 +1,5 @@
 import SC from '@emotion/styled';
+import {useTranslation} from 'next-i18next';
 import React from 'react';
 import {Element} from 'react-scroll';
 
@@ -134,25 +135,26 @@ const Link = SC.a`
 
 const Img = SC.img``;
 
-export const WorkWithUs = props => (
-  <Element name="workWithUs">
-    <Container>
-      <Content>
-        <RightColumn>
-          <H3>Работа у нас</H3>
-          <SvgWrap>
-            <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
-          </SvgWrap>
-          <Text>
-            Люди — самый ценный актив нашего бизнеса, поэтому мы создаем максимально комфортную и продуктивную среду для
-            работы сотрудников. Станьте частью нашей команды и работайте над проектом, о котором вы с интересом будете
-            рассказывать другим.
-          </Text>
-          <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
-            Присоединиться к команде
-          </Link>
-        </RightColumn>
-      </Content>
-    </Container>
-  </Element>
-);
+export const WorkWithUs = props => {
+  const {t} = useTranslation('common');
+  return (
+    <Element name="workWithUs">
+      <Container>
+        <Content>
+          <RightColumn>
+            <H3>{t('HomePage.WorkWithUs.title')}</H3>
+            <SvgWrap>
+              <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
+            </SvgWrap>
+            <Text>
+              {t('HomePage.WorkWithUs.text')}
+            </Text>
+            <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
+              {t('HomePage.WorkWithUs.link')}
+            </Link>
+          </RightColumn>
+        </Content>
+      </Container>
+    </Element>
+  );
+}
