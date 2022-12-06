@@ -50,12 +50,12 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           property="og:description"
           content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
         />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta property="article:published_time" content={new Date().toISOString()} />
         <meta property="article:modified_time" content={new Date().toISOString()} />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:url" content="http://madjoylab.ru/" />
-        <meta property="og:site_name" content="madjoylab" />
+        <meta property="og:site_name" content="Лаборатория безумной радости" />
         <meta property="og:image" content="/cover.png" key="og:image" />
         <meta property="twitter:image" content="/cover.png" key="twitter:image" />
         <meta
@@ -66,7 +66,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           property="twitter:description"
           content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
         />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="http://madjoylab.ru/" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
