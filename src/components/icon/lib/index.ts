@@ -6,7 +6,6 @@ import {flags} from './flags';
 import {telegram} from './telegram';
 import {whatsApp} from './whatsApp';
 
-
 export default {
   flags,
   notFound,

@@ -24,4 +24,4 @@ export const en = ({color, ...rest}) => {
       </g>
     </svg>
   );
-}
+};

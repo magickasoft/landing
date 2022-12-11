@@ -16,4 +16,4 @@ export const ru = ({color, ...rest}) => {
       </g>
     </svg>
   );
-}
+};
