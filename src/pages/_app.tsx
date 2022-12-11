@@ -5,7 +5,7 @@ import {Analytics} from '@vercel/analytics/react';
 import Head from 'next/head';
 import Router, {useRouter} from 'next/router';
 import Script from 'next/script';
-import {appWithTranslation} from 'next-i18next';
+import {appWithTranslation, useTranslation} from 'next-i18next';
 import React from 'react';
 
 import nextI18NextConfig from '../../next-i18next.config.js';
@@ -19,6 +19,7 @@ import theme from '../styles/theme';
 const clientSideEmotionCache = createEmotionCache();
 
 const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}) => {
+  const {t} = useTranslation('common');
   const router = useRouter();
   React.useEffect(() => {
     const handleRouteChange = url => pageview(url);
@@ -50,9 +51,12 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}) => {
       />
       <GlobalStyle />
       <Head>
-        <title>Madjoylab - создаём IT команды для технологических проектов</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="yandex-verification" content="bed3ff7aa8f6b9a4" />
+        <meta name="robots" content="max-image-preview:large" />
+        <title>{t('SEO.title')}</title>
+        <meta name="description" content={t('SEO.description')} />
+        <meta name="keywords" content={t('SEO.keywords')} />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

@@ -1,5 +1,6 @@
 import type {GetStaticProps, InferGetStaticPropsType} from 'next';
 import Head from 'next/head';
+import {useTranslation} from 'next-i18next';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import React from 'react';
 import {Events, scrollSpy} from 'react-scroll';
@@ -11,6 +12,7 @@ type Props = {
 };
 
 const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const {t} = useTranslation('common');
   React.useEffect(() => {
     Events.scrollEvent.register('begin', function (to, element) {
       console.log('begin', to);
@@ -31,44 +33,25 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Head>
-        <title>Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="max-image-preview:large" />
-        <meta
-          name="description"
-          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
-        />
-        <meta
-          name="keywords"
-          content="Digital-агентство, Студия madjoylab, Дизайн сайта, Дизайн приложений, Разработка приложений, Разработка сайтов, SMM-услуги, Школа дизайна, Школа разработки, madjoylab design, madjoylab dev"
-        />
-        <meta
-          property="og:title"
-          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование"
-        />
-        <meta
-          property="og:description"
-          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
-        />
-        <meta property="og:type" content="website" />
         <meta property="article:published_time" content={new Date().toISOString()} />
         <meta property="article:modified_time" content={new Date().toISOString()} />
-        <meta property="og:locale" content="ru_RU" />
-        <meta property="og:url" content="http://madjoylab.ru/" />
-        <meta property="og:site_name" content="Лаборатория безумной радости" />
-        <meta property="og:image" content="/cover.png" key="og:image" />
-        <meta property="twitter:image" content="/cover.png" key="twitter:image" />
-        <meta
-          property="twitter:title"
-          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование"
-        />
-        <meta
-          property="twitter:description"
-          content="Madjoylab - подбор IT персонала, аутсорсинг, IT Executive Search и карьерное консультирование.Успешно подбираем лучший IT персонал любого уровня и специализации.Обширная база кандидатов, гарантии."
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="http://madjoylab.ru/" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <title>{t('HomePage.SEO.title')}</title>
+        <meta name="description" content={t('HomePage.SEO.description')} />
+        <meta name="keywords" content={t('HomePage.SEO.keywords')} />
+        <meta property="og:title" content={t('HomePage.SEO.og.title')} />
+        <meta property="og:description" content={t('HomePage.SEO.og.description')} />
+        <meta property="og:type" content={t('HomePage.SEO.og.type')} />
+        <meta property="og:locale" content={t('HomePage.SEO.og.locale')} />
+        <meta property="og:url" content={t('HomePage.SEO.og.url')} />
+        <meta property="og:site_name" content={t('HomePage.SEO.og.site_name')} />
+        <meta property="og:image" key="og:image" content={t('HomePage.SEO.og.image')} />
+        <meta property="twitter:image" key="twitter:image" content={t('HomePage.SEO.twitter.image')} />
+        <meta property="twitter:title" content={t('HomePage.SEO.twitter.title')} />
+        <meta property="twitter:description" content={t('HomePage.SEO.twitter.description')} />
+        <meta name="twitter:card" content={t('HomePage.SEO.twitter.card')} />
+        <meta property="twitter:url" content={t('HomePage.SEO.twitter.url')} />
       </Head>
       <Intro />
       <Services />

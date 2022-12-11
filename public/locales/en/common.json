@@ -1,10 +1,36 @@
 {
+  "SEO": {
+    "title": "Madjoylab - we create IT teams for technology projects",
+    "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
+    "keywords": "Digital agency, madjoylab studio, Website design, Application design, Application development, Website development, SMM services, Design school, Development school, madjoylab design, madjoylab dev",
+  },
   "NotFoundPage": {
     "title": "This page \ndoes not exist",
     "text": "You followed the wrong link, or this page has been removed.",
     "link": "Start from the home page"
   },
   "HomePage": {
+    "SEO": {
+      "title": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting",
+      "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
+      "keywords": "Digital agency, madjoylab studio, Website design, Application design, Application development, Website development, SMM services, Design school, Development school, madjoylab design, madjoylab dev",
+      "og" : {
+        "title": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting",
+        "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
+        "type": "website",
+        "locale": "en_EN",
+        "url": "http://madjoylab.ru/en/",
+        "site_name": "Mad Joy Lab",
+        "image": "/cover.png"  
+      },
+      "twitter" : {
+        "image": "/cover.png",
+        "title": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting",
+        "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
+        "card": "summary_large_image",
+        "url": "http://madjoylab.ru/en/"
+      }
+    },
     "Intro": {
       "title": "We create IT teams for technology projects"
     },
