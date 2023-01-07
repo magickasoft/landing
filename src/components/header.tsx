@@ -93,9 +93,9 @@ export const Header = props => {
           <Link href="https://t.me/madjoylab">
             <SCIcon name="telegram" size={32} />
           </Link>
-          {/*<Link href="https://wa.me/79601195445">*/}
-          {/*  <SCIcon name="whatsApp" size={32} />*/}
-          {/*</Link>*/}
+          <Link href="https://wa.me/79601195445">
+           <SCIcon name="whatsApp" size={32} />
+          </Link>
         </Row>
       </Container>
     </>
