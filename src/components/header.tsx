@@ -88,7 +88,7 @@ export const Header = props => {
           <LocaleSwitcher />
           <Label>
             <Link href="tel://+79601195445">+7 960 119 54 45</Link>
-            <Link href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</Link>
+            <Link href="mailto:hello@madjoylab.ru">hello@madjoylab.ru</Link>
           </Label>
           <Link href="https://t.me/madjoylab">
             <SCIcon name="telegram" size={32} />

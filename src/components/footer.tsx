@@ -222,7 +222,7 @@ export const Footer = () => {
         <Brand>ОГРНИП 322366800104235</Brand>
         <Contacts>
           <Email>
-            <A href="mailto:madjoylab@gmail.com">madjoylab@gmail.com</A>
+            <A href="mailto:hello@madjoylab.ru">hello@madjoylab.ru</A>
           </Email>
           <A href="tel://+79601195445">+7 960 119 54 45</A>
         </Contacts>
