@@ -15,6 +15,7 @@ const {
 
 const defaultConfig = {
   output: 'standalone',
+  compress: true,
   compiler: {
     styledComponents: true,
     removeConsole: {
